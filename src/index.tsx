@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 
 
 
-render (
+render(
     <BrowserRouter>
         <ThemeProvider>
             <App/>
