@@ -10,3 +10,11 @@ export function buildResolvers (options: BuildOptions): ResolveOptions {
         alias: {}
     }
 }
+
+
+const asdaf = () => {
+    console.log('asfaf')
+}
+
+asdaf()
+
