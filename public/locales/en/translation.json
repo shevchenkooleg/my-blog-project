@@ -3,5 +3,6 @@
   "перевод": "translate",
   "язык": "Русский",
   "переключить": "toggle",
-  "загрузка": "Loading..."
+  "загрузка": "Loading...",
+  "page not exist": "Page not exist"
 }
