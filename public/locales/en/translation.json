@@ -4,5 +4,8 @@
   "язык": "Русский",
   "переключить": "toggle",
   "загрузка": "Loading...",
-  "page not exist": "Page not exist"
+  "page not exist": "Page not exist",
+  "Произошла непредвиденная ошибка": "Something went wrong!",
+  "Обновить страницу": "Refresh page",
+  "Выкинуть ошибку": "throw error"
 }
