@@ -9,14 +9,22 @@ module.exports = {
         'standard-with-typescript',
         'plugin:i18next/recommended'
     ],
-    overrides: [{
-        parserOptions: {
-            ecmaVersion: 'latest',
-            sourceType: 'module',
-            project: ['./tsconfig.json']
+    overrides: [
+        {
+            parserOptions: {
+                ecmaVersion: 'latest',
+                sourceType: 'module',
+                project: ['./tsconfig.json']
+            },
+            files: ['*.ts', '*.tsx']
         },
-        files: ['*.ts', '*.tsx']
-    }],
+        {
+            rules: {
+                'i18next/no-literal-string': 'off'
+            },
+            files: ['**/src/**/*.test.{ts,tsx}']
+        }
+    ],
     settings: {
         react: {
             version: 'detect'
