@@ -11,10 +11,3 @@ export function buildResolvers (options: BuildOptions): ResolveOptions {
     }
 }
 
-
-const asdaf = () => {
-    console.log('asfaf')
-}
-
-asdaf()
-

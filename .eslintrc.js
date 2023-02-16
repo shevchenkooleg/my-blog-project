@@ -9,12 +9,14 @@ module.exports = {
         'standard-with-typescript',
         'plugin:i18next/recommended'
     ],
-    overrides: [],
-    parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        project: ['./tsconfig.json']
-    },
+    overrides: [{
+        parserOptions: {
+            ecmaVersion: 'latest',
+            sourceType: 'module',
+            project: ['./tsconfig.json']
+        },
+        files: ['*.ts', '*.tsx']
+    }],
     settings: {
         react: {
             version: 'detect'
@@ -25,6 +27,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next'
     ],
+    parser: '@typescript-eslint/parser',
     rules: {
         '@typescript-eslint/indent': [2, 4],
         indent: ['error', 4],
@@ -38,7 +41,13 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-misused-promises': [0],
         '@typescript-eslint/no-floating-promises': [0],
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string':
+            ['error',
+                {
+                    markupOnly: true,
+                    ignoreAttribute: ['data-testid']
+                }
+            ],
         'max-len': ['error', { ignoreComments: true, code: 100 }]
 
 
