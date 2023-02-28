@@ -4,37 +4,26 @@ module.exports = {
         es2021: true,
         jest: true
     },
-    extends: [
-        'plugin:react/recommended',
-        'standard-with-typescript',
-        'plugin:i18next/recommended'
-    ],
-    overrides: [
-        {
-            parserOptions: {
-                ecmaVersion: 'latest',
-                sourceType: 'module',
-                project: ['./tsconfig.json']
-            },
-            files: ['*.ts', '*.tsx']
+    extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
+    overrides: [{
+        parserOptions: {
+            ecmaVersion: 'latest',
+            sourceType: 'module',
+            project: ['./tsconfig.json']
         },
-        {
-            rules: {
-                // 'i18next/no-literal-string': 'off'
-            },
-            files: ['**/src/**/*.test.{ts,tsx}']
-        }
-    ],
+        files: ['*.ts', '*.tsx']
+    }, {
+        rules: {
+            // 'i18next/no-literal-string': 'off'
+        },
+        files: ['**/src/**/*.test.{ts,tsx}']
+    }],
     settings: {
         react: {
             version: 'detect'
         }
     },
-    plugins: [
-        'react',
-        '@typescript-eslint',
-        'i18next'
-    ],
+    plugins: ['react', '@typescript-eslint', 'i18next'],
     parser: '@typescript-eslint/parser',
     rules: {
         '@typescript-eslint/indent': [2, 4],
@@ -49,16 +38,14 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-misused-promises': [0],
         '@typescript-eslint/no-floating-promises': [0],
-        'i18next/no-literal-string':
-            ['error',
-                {
-                    markupOnly: true,
-                    ignoreAttribute: ['data-testid', 'to']
-                }
-            ],
-        'max-len': ['error', { ignoreComments: true, code: 100 }]
-
-
+        'i18next/no-literal-string': ['error', {
+            markupOnly: true,
+            ignoreAttribute: ['data-testid', 'to']
+        }],
+        'max-len': ['error', {
+            ignoreComments: true,
+            code: 100
+        }]
     },
     globals: {
         __IS_DEV__: true
