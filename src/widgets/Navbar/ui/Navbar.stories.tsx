@@ -1,21 +1,21 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
-import AboutPage from "pages/AboutPage/ui/AboutPage";
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
 import { Theme } from "app/providers/ThemeProvider";
+import { Navbar } from "widgets/Navbar";
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'pages/AboutPage',
-    component: AboutPage,
+    title: 'widgets/Navbar',
+    component: Navbar,
     argTypes: {
         backgroundColor: { control: 'color' }
     }
-} as ComponentMeta<typeof AboutPage>;
+} as ComponentMeta<typeof Navbar>;
 
-const Template: ComponentStory<typeof AboutPage> = (args) => <AboutPage/>;
+const Template: ComponentStory<typeof Navbar> = (args) => <Navbar/>;
 
-export const Light = Template.bind({});
-Light.args = {};
+export const Primary = Template.bind({});
+Primary.args = {};
 
 export const Dark = Template.bind({});
 Dark.args = {};

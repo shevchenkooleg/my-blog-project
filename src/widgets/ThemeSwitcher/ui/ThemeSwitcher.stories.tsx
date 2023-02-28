@@ -1,21 +1,21 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
-import AboutPage from "pages/AboutPage/ui/AboutPage";
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
 import { Theme } from "app/providers/ThemeProvider";
+import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'pages/AboutPage',
-    component: AboutPage,
+    title: 'widgets/ThemeSwitcher',
+    component: ThemeSwitcher,
     argTypes: {
         backgroundColor: { control: 'color' }
     }
-} as ComponentMeta<typeof AboutPage>;
+} as ComponentMeta<typeof ThemeSwitcher>;
 
-const Template: ComponentStory<typeof AboutPage> = (args) => <AboutPage/>;
+const Template: ComponentStory<typeof ThemeSwitcher> = (args) => <ThemeSwitcher/>;
 
-export const Light = Template.bind({});
-Light.args = {};
+export const Primary = Template.bind({});
+Primary.args = {};
 
 export const Dark = Template.bind({});
 Dark.args = {};

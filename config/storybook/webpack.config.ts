@@ -1,7 +1,8 @@
 import path from "path";
-import type webpack from "webpack";
 import { type BuildPaths } from "../build/types/config";
 import { BuildCssLoader } from "../build/loaders/buildCssLoader";
+import { type RuleSetRule } from "webpack";
+import type webpack from "webpack";
 
 
 export default ({ config }: { config: webpack.Configuration }) => {
@@ -15,6 +16,17 @@ export default ({ config }: { config: webpack.Configuration }) => {
 
     config.resolve.extensions.push('.ts', '.tsx')
 
+    config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
+        // eslint-disable-next-line
+        if (/svg/.test(rule.test as string)) {
+            return { ...rule, exclude: /\.svg$/i }
+        }
+        return rule
+    })
+    config.module.rules.push({
+        test: /\.svg$/,
+        use: ['@svgr/webpack']
+    })
     config.module.rules.push(BuildCssLoader(true))
 
     return config;

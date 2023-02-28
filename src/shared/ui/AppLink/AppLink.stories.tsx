@@ -1,9 +1,9 @@
-import React from 'react';
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from "shared/config/storybook/Decorators/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider";
 import { AppLink } from "shared/ui/AppLink/AppLink";
 
+// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
     title: 'shared/AppLink',
     component: AppLink,
