@@ -1,6 +1,7 @@
 import React from 'react';
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import { Button, ThemeButton } from './Button';
+import '../../../app/styles/index.scss'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
@@ -21,6 +22,7 @@ export const Primary = Template.bind({});
 Primary.args = {
     children: 'Text'
 };
+
 
 export const Clear = Template.bind({});
 Clear.args = {
