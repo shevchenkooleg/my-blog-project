@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  pipline:
-    runs-on: ubuntu-latest
+  pipeline:
+    runs-on: ubuntu-latestß
     strategy:
       matrix:
         node-version: [ 17.x ]
