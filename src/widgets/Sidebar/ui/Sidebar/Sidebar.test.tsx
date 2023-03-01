@@ -1,5 +1,8 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import { Sidebar } from "widgets/Sidebar";
+import { fireEvent, screen } from "@testing-library/react";
+import { Sidebar } from "widgets/Sidebar/ui/Sidebar/Sidebar";
+import { componentRender } from "shared/lib/componentRender/componentRender";
+
+
 
 // jest.mock('react-i18next', () => ({
 //     useTranslation: () => {
@@ -28,12 +31,12 @@ describe('Sidebar component tests', () => {
     // })
 
     test('Sidebar will be render in the document', () => {
-        render(<Sidebar/>)
+        componentRender(<Sidebar/>, { route: '/' })
         screen.debug()
         expect(screen.getByTestId('sidebar')).toBeInTheDocument()
     })
     test('Sidebar will be collapsed', () => {
-        render(<Sidebar/>)
+        componentRender(<Sidebar/>)
         const toggleBtn = screen.getByTestId('sidebar-toggle');
         expect(screen.getByTestId('sidebar')).toBeInTheDocument()
         fireEvent.click(toggleBtn)
