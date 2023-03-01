@@ -1,7 +1,7 @@
-import React from 'react';
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
-import { AppLink, AppLinkTheme } from './AppLink';
-
+import { ThemeDecorator } from "shared/config/storybook/Decorators/ThemeDecorator";
+import { Theme } from "app/providers/ThemeProvider";
+import { AppLink } from "shared/ui/AppLink/AppLink";
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
@@ -9,9 +9,6 @@ export default {
     component: AppLink,
     argTypes: {
         backgroundColor: { control: 'color' }
-    },
-    args: {
-        to: '/'
     }
 } as ComponentMeta<typeof AppLink>;
 
@@ -19,11 +16,24 @@ const Template: ComponentStory<typeof AppLink> = (args) => <AppLink {...args} />
 
 export const Primary = Template.bind({});
 Primary.args = {
-    children: 'Link',
-    theme: AppLinkTheme.PRIMARY
+    children: 'Text'
 };
+
+export const Primary_Dark = Template.bind({});
+Primary_Dark.args = {
+    children: 'Text'
+};
+Primary_Dark.decorators = [ThemeDecorator(Theme.DARK)]
+
 export const Secondary = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
 Secondary.args = {
-    children: 'Link',
-    theme: AppLinkTheme.SECONDARY
+    children: 'Text'
 };
+
+export const Secondary_Dark = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+Secondary_Dark.args = {
+    children: 'Text'
+};
+Secondary_Dark.decorators = [ThemeDecorator(Theme.DARK)]

@@ -1,6 +1,6 @@
 import type webpack from "webpack";
 import { type BuildOptions } from "./types/config";
-import { buildCssLoader } from "./loader/buildCssLoader";
+import { BuildCssLoader } from "./loaders/buildCssLoader";
 
 
 export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
@@ -10,7 +10,7 @@ export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         exclude: /node_modules/
     }
 
-    const cssLoader = buildCssLoader(isDev)
+    const cssLoader = BuildCssLoader(isDev)
 
     const svgLoader = {
         test: /\.svg$/,

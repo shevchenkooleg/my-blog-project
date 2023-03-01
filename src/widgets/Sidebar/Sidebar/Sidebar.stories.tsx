@@ -1,6 +1,7 @@
-import React from 'react';
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
-import { Sidebar } from './Sidebar';
+import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
+import { Theme } from "app/providers/ThemeProvider";
+import { Sidebar } from "widgets/Sidebar";
 
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
@@ -12,7 +13,11 @@ export default {
     }
 } as ComponentMeta<typeof Sidebar>;
 
-const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />;
+const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar/>;
 
 export const Primary = Template.bind({});
 Primary.args = {};
+
+export const Dark = Template.bind({});
+Dark.args = {};
+Dark.decorators = [ThemeDecorator(Theme.DARK)]

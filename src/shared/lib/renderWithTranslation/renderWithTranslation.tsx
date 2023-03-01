@@ -9,7 +9,6 @@ export function renderWithTranslation (component: ReactNode) {
             <Suspense fallback=''>
                 {component}
             </Suspense>
-            {/* {component} */}
         </I18nextProvider>
     );
 }

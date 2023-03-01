@@ -1,9 +1,7 @@
-import React from 'react';
-import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import { ThemeSwitcher } from "widgets/ThemeSwitcher";
-import { Theme } from "app/providers/ThemeProvider";
+import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
-
+import { Theme } from "app/providers/ThemeProvider";
+import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
@@ -14,11 +12,11 @@ export default {
     }
 } as ComponentMeta<typeof ThemeSwitcher>;
 
-const Template: ComponentStory<typeof ThemeSwitcher> = (args) => <ThemeSwitcher {...args} />;
+const Template: ComponentStory<typeof ThemeSwitcher> = (args) => <ThemeSwitcher/>;
 
-export const Light = Template.bind({});
-Light.args = { className: Theme.LIGHT };
-Light.decorators = [ThemeDecorator(Theme.LIGHT)]
+export const Primary = Template.bind({});
+Primary.args = {};
+
 export const Dark = Template.bind({});
-Dark.args = { className: Theme.DARK };
+Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK)]

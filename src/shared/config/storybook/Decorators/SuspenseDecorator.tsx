@@ -1,5 +1,12 @@
-import { Suspense } from "react";
 import { type Story } from "@storybook/react";
+import { Suspense } from 'react';
 
-export const SuspenseDecorator = (Story: Story) =>
-    <Suspense fallback={''}>{Story({}, null)}</Suspense>
+
+
+export const SuspenseDecorator = (story: () => Story) => {
+    return (
+        <Suspense fallback=''>
+            {story()}
+        </Suspense>
+    )
+};
