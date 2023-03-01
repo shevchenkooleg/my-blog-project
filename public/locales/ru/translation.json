@@ -10,5 +10,9 @@
   "Выкинуть ошибку": "Выкинуть ошибку",
   "короткий язык": "Eng",
   "главная": "Главная",
-  "о сайте": "О сайте"
+  "о сайте": "О сайте",
+  "войти": "Войти",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " Amet beatae earum fuga magni non qui, sed suscipit tempora vero voluptate? Beatae distinctio enim excepturi fuga fugiat, nostrum perspiciatis suscipit velit!": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae earum fuga magni non qui, sed suscipit tempora vero voluptate? Beatae distinctio enim excepturi fuga fugiat, nostrum perspiciatis suscipit velit!"
+  }
 }

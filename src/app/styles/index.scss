@@ -3,11 +3,15 @@
 @import "src/app/styles/themes/normal";
 @import "src/app/styles/themes/dark";
 
-.app {
+body {
     font: var(--font-m);
+}
+
+.app {
     background: var(--bg-color);
-    color: var(--primary-color);
     min-height: 100vh;
+    font: var(--font-m);
+    color: var(--primary-color);
 }
 
 .content-page {

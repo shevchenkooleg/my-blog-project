@@ -19,16 +19,17 @@ module.exports = {
         files: ['*.ts', '*.tsx']
     }, {
         rules: {
-            // 'i18next/no-literal-string': 'off'
+            'i18next/no-literal-string': 'off',
+            'max-len': 'off'
         },
-        files: ['**/src/**/*.test.{ts,tsx}']
+        files: ['**/src/**/*.{test,stories}.{ts,tsx}']
     }],
     settings: {
         react: {
             version: 'detect'
         }
     },
-    plugins: ['react', '@typescript-eslint', 'i18next'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
     parser: '@typescript-eslint/parser',
     rules: {
         '@typescript-eslint/indent': [2, 4],
@@ -50,7 +51,9 @@ module.exports = {
         'max-len': ['error', {
             ignoreComments: true,
             code: 110
-        }]
+        }],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error'
     },
     globals: {
         __IS_DEV__: true

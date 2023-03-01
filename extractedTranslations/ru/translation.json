@@ -1,9 +1,14 @@
 {
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " Amet beatae earum fuga magni non qui, sed suscipit tempora vero voluptate? Beatae distinctio enim excepturi fuga fugiat, nostrum perspiciatis suscipit velit!": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae earum fuga magni non qui, sed suscipit tempora vero voluptate? Beatae distinctio enim excepturi fuga fugiat, nostrum perspiciatis suscipit velit!",
+    "Amet beatae earum fuga magni non qui, sed suscipit tempora vero voluptate? Beatae distinctio enim excepturi fuga fugiat, nostrum perspiciatis suscipit velit!": "Amet beatae earum fuga magni non qui, sed suscipit tempora vero voluptate? Beatae distinctio enim excepturi fuga fugiat, nostrum perspiciatis suscipit velit!"
+  },
   "o сайте": "o сайте",
   "page not exist": "page not exist",
   "Выкинуть ошибку": "Выкинуть ошибку",
   "Обновить страницу": "Обновить страницу",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "войти": "войти",
   "главная": "главная",
   "главная страница": "главная страница",
   "короткий язык": "короткий язык",
