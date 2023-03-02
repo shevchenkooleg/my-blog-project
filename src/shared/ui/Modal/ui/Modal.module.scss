@@ -8,16 +8,7 @@
     opacity: 0;
     pointer-events: none;
     color: var(--primary-color);
-}
-
-.Modal.dark {
-    --bg-color: rgb(1 39 87);
-    --primary-color: #03a920;
-}
-
-.Modal.light {
-    --bg-color: #bbb;
-    --primary-color: #1827da;
+    background: rgba(0 0 0 / 0%);
 }
 
 .overlay {
@@ -36,7 +27,6 @@
     transition: 0.3s transform;
     transform: scale(0.5);
     max-width: 60%;
-    font: var(--font-size-m);
 }
 
 .opened {
