@@ -53,7 +53,8 @@ module.exports = {
             code: 110
         }],
         'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'error'
+        'react-hooks/exhaustive-deps': 'error',
+        'promise/param-names': 'off'
     },
     globals: {
         __IS_DEV__: true
