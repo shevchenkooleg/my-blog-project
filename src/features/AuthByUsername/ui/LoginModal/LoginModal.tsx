@@ -1,4 +1,3 @@
-import cls from "./LoginModal.module.scss"
 import { classNames } from "shared/lib/classNames/classNames";
 import { type FC } from 'react';
 import { Modal } from "shared/ui/Modal";
@@ -20,7 +19,7 @@ export const LoginModal: FC<LoginModalProps> = (props) => {
             isOpen={isOpen}
             onClose={onClose}
             element={element}
-            className={classNames(cls.LoginModal, {}, [className])}>
+            className={classNames('', {}, [className])}>
             <LoginForm/>
         </Modal>
     );
