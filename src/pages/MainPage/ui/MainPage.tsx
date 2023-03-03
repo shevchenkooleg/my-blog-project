@@ -4,7 +4,6 @@ const MainPage = () => {
     const { t } = useTranslation('main')
 
 
-
     return (
         <div>
             {t('главная страница')}
@@ -13,3 +12,5 @@ const MainPage = () => {
 };
 
 export default MainPage;
+
+
