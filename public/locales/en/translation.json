@@ -19,5 +19,8 @@
   "decrement": "decrement",
   "Войти": "Login",
   "Введите логин": "Enter login:",
-  "Введите пароль": "Enter password:"
+  "Введите пароль": "Enter password:",
+  "Форма авторизации": "Sigh In",
+  "Неверный логин и/или пароль": "Wrong login or/and password",
+  "Выйти": "Log out"
 }

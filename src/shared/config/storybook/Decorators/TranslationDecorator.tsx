@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 
 
 
-export const SuspenseDecorator = (story: () => Story) => {
+export const TranslationDecorator = (story: () => Story) => {
     return (
         <Suspense fallback=''>
             {story()}

@@ -21,11 +21,24 @@ Primary.args = {
     children: 'Text'
 };
 
+export const Primary_Disabled = Template.bind({});
+Primary_Disabled.args = {
+    children: 'Text',
+    disabled: true
+};
+
 export const Primary_Dark = Template.bind({});
 Primary_Dark.args = {
     children: 'Text'
 };
 Primary_Dark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const Primary_Dark_Disabled = Template.bind({});
+Primary_Dark_Disabled.args = {
+    children: 'Text',
+    disabled: true
+};
+Primary_Dark_Disabled.decorators = [ThemeDecorator(Theme.DARK)]
 
 export const Clear = Template.bind({});
 Clear.args = {
