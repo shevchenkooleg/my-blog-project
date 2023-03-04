@@ -12,7 +12,7 @@ import { getLoginUsername } from "../../model/selectors/getLoginUsername/getLogi
 import { getLoginIsLoading } from "../../model/selectors/getLoginIsLoading/getLoginIsLoading";
 import { getLoginPassword } from "../../model/selectors/getLoginPassword/getLoginPassword";
 import { getLoginError } from "../../model/selectors/getLoginError/getLoginError";
-import { DynamicModuleLoader, type ReducerList } from "shared/lib/components/DynamicModuleLoader";
+import { DynamicModuleLoader, type ReducerList } from "shared/components/DynamicModuleLoader";
 
 export interface LoginFormProps {
     className?: string
