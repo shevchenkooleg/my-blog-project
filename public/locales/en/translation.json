@@ -22,5 +22,6 @@
   "Введите пароль": "Enter password:",
   "Форма авторизации": "Sigh In",
   "Неверный логин и/или пароль": "Wrong login or/and password",
-  "Выйти": "Log out"
+  "Выйти": "Log out",
+  "Профиль": "Profile Page"
 }

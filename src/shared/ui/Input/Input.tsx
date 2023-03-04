@@ -1,6 +1,6 @@
 import cls from "./Input.module.scss"
 import { classNames } from "shared/lib/classNames/classNames";
-import React, { type FC, type InputHTMLAttributes } from 'react';
+import React, { memo, type FC, type InputHTMLAttributes } from 'react';
 
 type InputAttributes = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
 
@@ -10,7 +10,7 @@ interface InputProps extends InputAttributes {
     onChange?: (value: string) => void
 }
 
-export const Input: FC<InputProps> = (props: InputProps) => {
+export const Input: FC<InputProps> = memo((props: InputProps) => {
     const {
         className,
         value,
@@ -35,4 +35,7 @@ export const Input: FC<InputProps> = (props: InputProps) => {
             <input type={type} value={value} onChange={onChangeHandler} {...otherProps}/>
         </div>
     );
-};
+});
+
+
+Input.displayName = 'Input'
