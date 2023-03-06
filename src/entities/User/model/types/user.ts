@@ -1,7 +1,7 @@
 
 export interface User {
-    id: number
-    username: string
+    id: number | undefined
+    username: string | undefined
 }
 
 export interface UserSchema {

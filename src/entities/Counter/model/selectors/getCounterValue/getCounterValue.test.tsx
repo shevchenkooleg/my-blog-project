@@ -1,5 +1,4 @@
 import { getCounterValue } from "entities/Counter/model/selectors/getCounterValue/getCounterValue";
-import { type DeepPartial } from "@reduxjs/toolkit";
 import { type StateSchema } from "app/providers/StoreProvider";
 import { componentRender } from "shared/lib/test/componentRender/componentRender";
 import { screen } from "@testing-library/react";

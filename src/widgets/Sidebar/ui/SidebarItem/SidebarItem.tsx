@@ -22,7 +22,7 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
                 className={classNames(cls.item)}
             >
                 <item.Icon className={cls.icon}/>
-                <span className={classNames(cls.link)}>{t(item.text)}</span>
+                <span className={classNames(cls.link)}>{t(`${item.text}`)}</span>
             </AppLink>
         </div>
     );

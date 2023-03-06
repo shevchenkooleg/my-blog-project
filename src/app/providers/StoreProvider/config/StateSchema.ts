@@ -6,6 +6,7 @@ import {
     type Reducer, type ReducersMapObject
 } from "@reduxjs/toolkit";
 import { type ProfileSchema } from "entities/Profile";
+import { type AxiosInstance } from "axios";
 
 
 export interface StateSchema {
@@ -29,4 +30,13 @@ export interface ReducerManager {
     reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>
     add: (key: StateSchemaKey, reducer: Reducer) => void
     remove: (key: StateSchemaKey) => void
+}
+
+export interface ThunkExtraArg {
+    api: AxiosInstance
+}
+
+export interface ThunkConfig<T> {
+    rejectValue: T
+    extra: ThunkExtraArg
 }

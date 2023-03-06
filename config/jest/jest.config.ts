@@ -11,7 +11,10 @@ export default {
     coveragePathIgnorePatterns: [
         "/node_modules/"
     ],
-    globals: { __IS_DEV__: true },
+    globals: {
+        __IS_DEV__: true,
+        __API__: ''
+    },
     moduleFileExtensions: [
         "js",
         "jsx",

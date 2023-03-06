@@ -9,19 +9,19 @@ const initialState: UserSchema = {
     }
 
 }
-
+/* eslint-disable  @typescript-eslint/no-non-null-assertion */
 export const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        setUserData: (state, action: PayloadAction<User>) => {
-            state.authData.username = action.payload.username
-            state.authData.id = action.payload.id
+        setAuthData: (state, action: PayloadAction<User>) => {
+            state.authData!.username = action.payload.username
+            state.authData!.id = action.payload.id
         },
         initAuthData: (state) => {
-            const user: User = JSON.parse(localStorage.getItem(USER_LOCALSTORAGE_KEY))
+            const user = localStorage.getItem(USER_LOCALSTORAGE_KEY)
             if (user) {
-                state.authData = user
+                state.authData = JSON.parse(user)
             }
         },
         logout: (state) => {

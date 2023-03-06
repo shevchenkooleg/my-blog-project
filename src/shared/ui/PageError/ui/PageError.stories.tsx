@@ -2,7 +2,6 @@ import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
 import { Theme } from "app/providers/ThemeProvider";
 import { PageError } from "shared/ui/PageError";
-
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
     title: 'shared/PageError',

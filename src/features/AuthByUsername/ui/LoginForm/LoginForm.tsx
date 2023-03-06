@@ -14,6 +14,8 @@ import { getLoginPassword } from "../../model/selectors/getLoginPassword/getLogi
 import { getLoginError } from "../../model/selectors/getLoginError/getLoginError";
 import { DynamicModuleLoader, type ReducerList } from "shared/components/DynamicModuleLoader";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { type StateSchema } from "app/providers/StoreProvider";
+import { type LoginSchema } from "features/AuthByUsername";
 
 export interface LoginFormProps {
     className?: string
@@ -55,6 +57,13 @@ const LoginForm = memo((props: LoginFormProps) => {
         window.addEventListener('keydown', onEnterKeyPress)
         return () => { window.removeEventListener('keydown', onEnterKeyPress); }
     }, [onEnterKeyPress])
+
+
+    const login: LoginSchema | undefined = useSelector((state: StateSchema) => state?.loginForm)
+
+    useEffect(() => {
+        console.log(login)
+    }, [login])
 
     return (
         <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount={true}>

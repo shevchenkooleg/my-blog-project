@@ -1,5 +1,5 @@
 import cls from './Button.module.scss'
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames, type Mods } from "shared/lib/classNames/classNames";
 import { memo, type ReactNode, type ButtonHTMLAttributes } from 'react';
 
 
@@ -31,14 +31,14 @@ export const Button = memo((props: ButtonProps) => {
         className,
         children,
         onClick,
-        theme,
+        theme = '',
         square,
         disabled,
         size = ButtonSize.M,
         ...otherProps
     } = props
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [cls[theme]]: true,
         [cls.square]: square,
         [cls[size]]: true,
