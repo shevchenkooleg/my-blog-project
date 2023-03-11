@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
 import { type SidebarItemType } from "widgets/Sidebar/model/items";
 import { memo } from "react";
+import { useSelector } from "react-redux";
+import { getUserAuthData } from "entities/User";
 
 interface SidebarItemProps {
     collapsed: boolean
@@ -13,6 +15,11 @@ interface SidebarItemProps {
 export const SidebarItem = memo((props: SidebarItemProps) => {
     const { t } = useTranslation()
     const { collapsed, item } = props
+    const isAuth = useSelector(getUserAuthData)
+
+    if (item.authOnly && !isAuth?.id) {
+        return null
+    }
 
     return (
         <div className={classNames('', { [cls.collapsed]: collapsed })}>

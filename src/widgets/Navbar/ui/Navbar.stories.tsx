@@ -27,10 +27,21 @@ Primary.decorators = [StoreDecorator({
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    user: {
-        authData: {
-            id: 1
+Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        user: {
+            authData: {
+                id: 1
+            }
         }
-    }
-})]
+    })]
+Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        user: {
+            authData: {
+                id: 1
+            }
+        }
+    })]
