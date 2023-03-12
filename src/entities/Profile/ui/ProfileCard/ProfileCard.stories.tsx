@@ -63,3 +63,13 @@ Dark.args = {
 Dark.decorators = [
     ThemeDecorator(Theme.DARK)
 ]
+
+export const WithError = Template.bind({});
+WithError.args = {
+    error: 'true'
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+    isLoading: true
+};

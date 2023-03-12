@@ -1,4 +1,5 @@
 {
+  "": "",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Amet beatae earum fuga magni non qui, sed suscipit tempora vero voluptate? Beatae distinctio enim excepturi fuga fugiat, nostrum perspiciatis suscipit velit!": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae earum fuga magni non qui, sed suscipit tempora vero voluptate? Beatae distinctio enim excepturi fuga fugiat, nostrum perspiciatis suscipit velit!",
     "Amet beatae earum fuga magni non qui, sed suscipit tempora vero voluptate? Beatae distinctio enim excepturi fuga fugiat, nostrum perspiciatis suscipit velit!": "Amet beatae earum fuga magni non qui, sed suscipit tempora vero voluptate? Beatae distinctio enim excepturi fuga fugiat, nostrum perspiciatis suscipit velit!"
@@ -17,14 +18,20 @@
   "Войти": "Войти",
   "Выйти": "Выйти",
   "Выкинуть ошибку": "Выкинуть ошибку",
+  "Данные не указаны": "Данные не указаны",
+  "Имя и фамилия обязательны": "Имя и фамилия обязательны",
   "Имя пользователя": "Имя пользователя",
+  "Имя пользователя должно быть более 3 символов": "Имя пользователя должно быть более 3 символов",
   "Неверный логин и/или пароль": "Неверный логин и/или пароль",
+  "Некорректная страна": "Некорректная страна",
+  "Некорректный возраст": "Некорректный возраст",
   "Обновить страницу": "Обновить страницу",
   "Отменить": "Отменить",
   "Попробуйте перезагрузить страницу": "Попробуйте перезагрузить страницу",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
   "Профиль": "Профиль",
   "Редактировать": "Редактировать",
+  "Серверная ошибка при сохранении": "Серверная ошибка при сохранении",
   "Сохранить": "Сохранить",
   "Укажите валюту": "Укажите валюту",
   "Укажите страну": "Укажите страну",

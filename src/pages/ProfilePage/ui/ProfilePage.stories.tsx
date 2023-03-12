@@ -54,3 +54,23 @@ Dark.decorators = [
         }
     })
 ]
+
+export const Dark_readOnly = Template.bind({});
+Dark_readOnly.args = {};
+Dark_readOnly.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        profile: {
+            readonly: true,
+            form: {
+                firstName: "Олег",
+                lastName: "Шевченко",
+                age: 35,
+                currency: Currency.EUR,
+                country: Country.Russia,
+                city: "Sochi",
+                username: "admin"
+            }
+        }
+    })
+]

@@ -12,5 +12,11 @@
   "Имя пользователя": "User name",
   "Аватар": "Avatar",
   "Укажите валюту": "Select currency",
-  "Укажите страну": "Select country"
+  "Укажите страну": "Select country",
+  "Серверная ошибка при сохранении": "Server error on save",
+  "Некорректный возраст": "Incorrect age",
+  "Данные не указаны": "Data not specified",
+  "Некорректная страна": "Incorrect country",
+  "Имя и фамилия обязательны": "First and last name are required",
+  "Имя пользователя должно быть более 3 символов": "Username must be more than 3 characters length"
 }
