@@ -10,7 +10,8 @@ import {
     getProfileIsLoading,
     getProfileReadonly,
     getProfileValidateErrors,
-    ProfileCard, ValidateProfileError
+    ProfileCard,
+    ValidateProfileError
 } from "entities/Profile";
 import { useSelector } from "react-redux";
 import { ProfilePageHeader } from "./ProfilePageHeader/ProfilePageHeader";

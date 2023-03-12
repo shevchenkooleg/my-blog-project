@@ -33,7 +33,7 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     rules: {
         '@typescript-eslint/indent': [2, 4],
-        indent: ['error', 4],
+        indent: 'off',
         '@typescript-eslint/strict-boolean-expressions': 'off',
         '@typescript-eslint/semi': 'off',
         'react/react-in-jsx-scope': 'off',

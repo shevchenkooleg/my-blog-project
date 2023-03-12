@@ -3,11 +3,7 @@ import { type User, type UserSchema } from "../types/user";
 import { USER_LOCALSTORAGE_KEY } from "shared/const/localstorage";
 
 const initialState: UserSchema = {
-    authData: {
-        id: undefined,
-        username: undefined
-    }
-
+    _isInit: false
 }
 /* eslint-disable  @typescript-eslint/no-non-null-assertion */
 export const userSlice = createSlice({
@@ -15,17 +11,17 @@ export const userSlice = createSlice({
     initialState,
     reducers: {
         setAuthData: (state, action: PayloadAction<User>) => {
-            state.authData!.username = action.payload.username
-            state.authData!.id = action.payload.id
+            state.authData = action.payload
         },
         initAuthData: (state) => {
             const user = localStorage.getItem(USER_LOCALSTORAGE_KEY)
             if (user) {
                 state.authData = JSON.parse(user)
             }
+            state._isInit = true
         },
         logout: (state) => {
-            state.authData = initialState.authData
+            state.authData = undefined
             localStorage.removeItem(USER_LOCALSTORAGE_KEY)
         }
     }
