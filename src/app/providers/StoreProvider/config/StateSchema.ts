@@ -2,12 +2,16 @@ import { type CounterSchema } from "entities/Counter";
 import { type UserSchema } from "entities/User";
 import { type LoginSchema } from "features/AuthByUsername";
 import {
-    type AnyAction, type CombinedState, type EnhancedStore,
-    type Reducer, type ReducersMapObject
+    type AnyAction,
+    type CombinedState,
+    type EnhancedStore,
+    type Reducer,
+    type ReducersMapObject
 } from "@reduxjs/toolkit";
 import { type ProfileSchema } from "entities/Profile";
 import { type AxiosInstance } from "axios";
 import { type ArticleDetailsSchema } from "entities/Article";
+import { type ArticleDetailsCommentSchema } from "features/ArticleCommentList";
 
 
 export interface StateSchema {
@@ -18,6 +22,7 @@ export interface StateSchema {
     loginForm?: LoginSchema
     profile?: ProfileSchema
     articleDetails?: ArticleDetailsSchema
+    articleDetailsComments?: ArticleDetailsCommentSchema
 }
 
 

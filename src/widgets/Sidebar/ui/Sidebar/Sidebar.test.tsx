@@ -15,7 +15,7 @@ import { componentRender } from "shared/lib/test/componentRender/componentRender
 //         };
 //     },
 //     initReactI18next: {
-//         type: '3rdParty',
+//         types: '3rdParty',
 //         init: () => {
 //         }
 //     }

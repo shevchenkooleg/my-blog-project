@@ -1,7 +1,6 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { CurrencySelect } from './CurrencySelect';
 
-
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
     title: 'entities/CurrencySelect',

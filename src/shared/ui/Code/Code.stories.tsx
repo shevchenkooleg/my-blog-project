@@ -13,12 +13,12 @@ export default {
     }
 } as ComponentMeta<typeof Code>;
 
-const text = 'import { type ComponentMeta, type ComponentStory } from \'@storybook/react\';\n' +
+const text = 'import { types ComponentMeta, types ComponentStory } from \'@storybook/react\';\n' +
     'import { ThemeDecorator } from \'shared/config/storybook/Decorators/ThemeDecorator\';\n' +
     'import { Theme } from "app/providers/ThemeProvider";\n' +
     '\n' +
     '\n' +
-    '// eslint-disable-next-line @typescript-eslint/consistent-type-assertions\n' +
+    '// eslint-disable-next-line @typescript-eslint/consistent-types-assertions\n' +
     'export default {\n' +
     '    title: \'widgets/Code\',\n' +
     '    component: Code,\n' +
