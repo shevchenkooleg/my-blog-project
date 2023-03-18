@@ -7,6 +7,7 @@ import {
 } from "@reduxjs/toolkit";
 import { type ProfileSchema } from "entities/Profile";
 import { type AxiosInstance } from "axios";
+import { type ArticleDetailsSchema } from "entities/Article";
 
 
 export interface StateSchema {
@@ -16,6 +17,7 @@ export interface StateSchema {
     // Async reducers
     loginForm?: LoginSchema
     profile?: ProfileSchema
+    articleDetails?: ArticleDetailsSchema
 }
 
 
