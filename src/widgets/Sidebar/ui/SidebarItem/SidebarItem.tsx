@@ -2,10 +2,10 @@ import cls from "./SidebarItem.module.scss"
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import { type SidebarItemType } from "widgets/Sidebar/model/items";
 import { memo } from "react";
 import { useSelector } from "react-redux";
 import { getUserAuthData } from "entities/User";
+import { type SidebarItemType } from "widgets/Sidebar/model/types/sidebar";
 
 interface SidebarItemProps {
     collapsed: boolean
