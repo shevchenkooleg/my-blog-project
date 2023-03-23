@@ -5,6 +5,7 @@ import { type Profile, ValidateProfileError } from "../../types/profile";
 import { updateProfileData } from "./updateProfileData";
 
 const formData: Profile = {
+    id: '1',
     firstName: "Олег",
     lastName: "Шевченко",
     age: 35,
@@ -25,7 +26,7 @@ describe('updateProfileData.test', () => {
         })
 
         thunk.api.put.mockReturnValue(Promise.resolve({ data: formData }))
-        const result = await thunk.callThunk(undefined);
+        const result = await thunk.callThunk('1');
 
         console.log(result)
         expect(thunk.api.put).toHaveBeenCalled()
@@ -40,7 +41,7 @@ describe('updateProfileData.test', () => {
             }
         })
         thunk.api.put.mockReturnValue(Promise.resolve({ status: 403 }))
-        const result = await thunk.callThunk(undefined)
+        const result = await thunk.callThunk('1')
         console.log(result)
         expect(result.meta.requestStatus).toBe('rejected')
         expect(result.payload).toEqual([ValidateProfileError.SERVER_ERROR])
@@ -52,7 +53,7 @@ describe('updateProfileData.test', () => {
                 form: { ...formData, age: -37 }
             }
         })
-        const result = await thunk.callThunk(undefined)
+        const result = await thunk.callThunk('1')
         expect(result.meta.requestStatus).toBe('rejected')
         expect(result.payload).toEqual([ValidateProfileError.INCORRECT_AGE])
     })

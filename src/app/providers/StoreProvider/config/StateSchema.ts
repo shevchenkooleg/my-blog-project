@@ -12,6 +12,7 @@ import { type ProfileSchema } from "entities/Profile";
 import { type AxiosInstance } from "axios";
 import { type ArticleDetailsSchema } from "entities/Article";
 import { type ArticleDetailsCommentSchema } from "features/ArticleCommentList";
+import { type AddCommentFormSchema } from "features/AddCommentForm";
 
 
 export interface StateSchema {
@@ -23,6 +24,7 @@ export interface StateSchema {
     profile?: ProfileSchema
     articleDetails?: ArticleDetailsSchema
     articleDetailsComments?: ArticleDetailsCommentSchema
+    addCommentForm?: AddCommentFormSchema
 }
 
 

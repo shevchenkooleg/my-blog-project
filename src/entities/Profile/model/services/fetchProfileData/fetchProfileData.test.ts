@@ -21,7 +21,7 @@ describe('fetchProfileData.test', () => {
         const thunk = new TestAsyncThunk(fetchProfileData)
 
         thunk.api.get.mockReturnValue(Promise.resolve({ data: responseValue }))
-        const result = await thunk.callThunk(undefined);
+        const result = await thunk.callThunk('1');
 
         console.log(result)
         expect(thunk.api.get).toHaveBeenCalled()
@@ -31,7 +31,7 @@ describe('fetchProfileData.test', () => {
     test('error fetch data', async () => {
         const thunk = new TestAsyncThunk(fetchProfileData)
         thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }))
-        const result = await thunk.callThunk(undefined)
+        const result = await thunk.callThunk('1')
         console.log(result)
         expect(result.meta.requestStatus).toBe('rejected')
     })

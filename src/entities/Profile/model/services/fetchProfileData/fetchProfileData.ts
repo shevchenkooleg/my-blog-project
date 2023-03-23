@@ -3,13 +3,13 @@ import { type ThunkConfig } from "app/providers/StoreProvider/config/StateSchema
 import { type Profile } from "../../types/profile";
 
 
-export const fetchProfileData = createAsyncThunk<Profile, undefined, ThunkConfig<string> >(
+export const fetchProfileData = createAsyncThunk<Profile, string, ThunkConfig<string> >(
     'profile/fetchUserData',
-    async (_, thunkAPI) => {
+    async (profileId, thunkAPI) => {
         const { rejectWithValue, extra } = thunkAPI
 
         try {
-            const response = await extra.api.get<Profile>('/profile')
+            const response = await extra.api.get<Profile>(`/profile/${profileId}`)
             if (!response.data) {
                 throw new Error()
             }

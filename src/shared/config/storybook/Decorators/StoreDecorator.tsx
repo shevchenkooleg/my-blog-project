@@ -3,14 +3,16 @@ import { type StateSchema, StoreProvider } from "app/providers/StoreProvider";
 import { loginReducer } from "features/AuthByUsername/model/slice/loginSlice";
 import { type ReducerList } from "shared/components/DynamicModuleLoader";
 import { profileReducer } from "entities/Profile";
-import { useReducer } from "react";
 import { articleDetailsReducer } from "entities/Article/model/slice/articleDetailsSlice";
+import { addCommentFormReducer } from "features/AddCommentForm/model/slice/addCommentFormSlice";
+import { userReducer } from "entities/User";
 
 const defaultAsyncReducers: ReducerList = {
     loginForm: loginReducer,
     profile: profileReducer,
-    user: useReducer,
-    articleDetails: articleDetailsReducer
+    user: userReducer,
+    articleDetails: articleDetailsReducer,
+    addCommentForm: addCommentFormReducer
 }
 
 export const StoreDecorator = (

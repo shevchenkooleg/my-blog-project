@@ -1,5 +1,5 @@
 import { classNames } from "shared/lib/classNames/classNames";
-import { type FC, useCallback, useEffect } from 'react';
+import { type FC, useCallback } from 'react';
 import { DynamicModuleLoader, type ReducerList } from "shared/components/DynamicModuleLoader";
 import { profileActions, profileReducer } from "entities/Profile/model/slice/profileSlice";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
@@ -19,6 +19,8 @@ import { type Currency } from "entities/Currency";
 import { type Country } from "entities/Country";
 import { Text, TextTheme } from "shared/ui/Text/Text";
 import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
+import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 
 
 const reducers: ReducerList = {
@@ -38,6 +40,7 @@ const ProfilePage: FC<ProfilePageProps> = (props) => {
     const error = useSelector(getProfileErrors)
     const validateErrors = useSelector(getProfileValidateErrors)
     const readOnly = useSelector(getProfileReadonly)
+    const { id } = useParams<{ id: string }>()
 
     const validateErrorsTranslates = {
         [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка при сохранении'),
@@ -49,11 +52,11 @@ const ProfilePage: FC<ProfilePageProps> = (props) => {
     }
 
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData())
+    useInitialEffect(() => {
+        if (id) {
+            dispatch(fetchProfileData(id))
         }
-    }, [dispatch])
+    })
 
 
     const onChangeFirstName = useCallback((value?: string) => {

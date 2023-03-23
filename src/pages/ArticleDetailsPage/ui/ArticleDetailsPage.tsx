@@ -1,23 +1,23 @@
 import cls from "./ArticleDetailsPage.module.scss"
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
-import { memo } from "react";
+import { memo, useCallback } from "react";
 import { ArticleDetails } from "entities/Article";
 import { useParams } from "react-router-dom";
 import { Text } from "shared/ui/Text/Text";
 import { CommentList } from "entities/Comment";
 import { DynamicModuleLoader, type ReducerList } from "shared/components/DynamicModuleLoader";
-import {
-    articleDetailsCommentReducer,
-    getArticleComments
-} from "features/ArticleCommentList/model/slice/articleDetailsCemmentSlice";
 import { useSelector } from "react-redux";
-import { getArticleCommentsIsLoading } from "features/ArticleCommentList";
+import {
+    addCommentForArticle,
+    articleDetailsCommentReducer,
+    fetchCommentsByArticleId,
+    getArticleComments,
+    getArticleCommentsIsLoading
+} from "features/ArticleCommentList";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import {
-    fetchCommentsByArticleId
-} from "features/ArticleCommentList/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
+import { AddCommentForm } from "features/AddCommentForm";
 
 interface ArticlesDetailsPageProps {
     className?: string
@@ -33,6 +33,10 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
     const reducers: ReducerList = {
         articleDetailsComments: articleDetailsCommentReducer
     }
+
+    const onSendComment = useCallback(() => {
+        dispatch(addCommentForArticle())
+    }, [dispatch])
 
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id))
@@ -51,6 +55,7 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
             <div className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
                 <ArticleDetails id={id}/>
                 <Text title={t('Комментарии')} className={cls.commentTitle}/>
+                <AddCommentForm onSendComment={onSendComment}/>
                 <CommentList comments={comments} isLoading={isLoading}/>
             </div>
         </DynamicModuleLoader>
