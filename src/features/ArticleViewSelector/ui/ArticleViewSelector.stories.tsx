@@ -1,24 +1,28 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
 import { Theme } from "app/providers/ThemeProvider";
-import ArticlesPage from './ArticlesPage';
-
+import { ArticleViewSelector } from './ArticleViewSelector';
+import { ArticleView } from "entities/Article";
 
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'widgets/ArticlesPage',
-    component: ArticlesPage,
+    title: 'features/ArticleViewSelector',
+    component: ArticleViewSelector,
     argTypes: {
         backgroundColor: { control: 'color' }
     }
-} as ComponentMeta<typeof ArticlesPage>;
+} as ComponentMeta<typeof ArticleViewSelector>;
 
-const Template: ComponentStory<typeof ArticlesPage> = (args) => <ArticlesPage/>;
+const Template: ComponentStory<typeof ArticleViewSelector> = (args) => <ArticleViewSelector {...args}/>;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+    view: ArticleView.BIG
+};
 
 export const Dark = Template.bind({});
-Dark.args = {};
+Dark.args = {
+    view: ArticleView.BIG
+};
 Dark.decorators = [ThemeDecorator(Theme.DARK)]

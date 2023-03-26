@@ -13,6 +13,7 @@ import { type AxiosInstance } from "axios";
 import { type ArticleDetailsSchema } from "entities/Article";
 import { type ArticleDetailsCommentSchema } from "features/ArticleCommentList";
 import { type AddCommentFormSchema } from "features/AddCommentForm";
+import { type ArticlesPageSchema } from "pages/ArticlesPage";
 
 
 export interface StateSchema {
@@ -25,6 +26,8 @@ export interface StateSchema {
     articleDetails?: ArticleDetailsSchema
     articleDetailsComments?: ArticleDetailsCommentSchema
     addCommentForm?: AddCommentFormSchema
+    articlesPage?: ArticlesPageSchema
+
 }
 
 
