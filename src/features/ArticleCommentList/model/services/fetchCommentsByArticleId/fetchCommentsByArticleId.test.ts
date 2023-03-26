@@ -8,8 +8,7 @@ const responseValue: Comment[] = [
         text: "some comment",
         user: {
             id: 1,
-            username: 'admin',
-            avatar: "https://i.imgur.com/qw7CV6k.jpg"
+            username: 'admin'
         }
     },
     {
@@ -17,8 +16,7 @@ const responseValue: Comment[] = [
         text: "some comment 2",
         user: {
             id: 1,
-            username: 'admin',
-            avatar: "https://i.imgur.com/qw7CV6k.jpg"
+            username: 'admin'
         }
     },
     {

@@ -7,17 +7,19 @@ interface AvatarProps {
     avatar?: string
     size?: number
     alt?: string
+    round?: number
 }
 
 export const Avatar = (props: AvatarProps) => {
-    const { className, avatar, size, alt } = props
+    const { className, avatar, size, round = 50, alt } = props
     const mods: Mods = {}
     const styles = useMemo<CSSProperties>(() => {
         return {
             width: size || 100,
-            height: size || 100
+            height: size || 100,
+            borderRadius: `${String(round)}%`
         }
-    }, [size])
+    }, [round, size])
 
     return (
         <img

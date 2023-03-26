@@ -7,3 +7,6 @@ export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema'
 export { getArticleDetailsData } from './model/selectors/getArticleDetailsData/getArticleDetailsData'
 export { getArticleDetailsIsLoading } from './model/selectors/getArticleDetailsIsLoading/getArticleDetailsIsLoading'
 export { getArticleDetailsError } from './model/selectors/getArticleDetailsError/getArticleDetailsError'
+
+export { ArticleList } from './ui/ArticleList/ArticleList'
+export { ArticleView } from './model/types/artiicle'

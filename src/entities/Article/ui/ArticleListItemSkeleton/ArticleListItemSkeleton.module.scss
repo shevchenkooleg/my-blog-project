@@ -1,0 +1,70 @@
+.BIG {
+    .views {
+        margin-left: auto;
+        margin-right: 8px;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .username {
+        margin-left: 8px;
+    }
+
+    .date {
+        margin-left: auto;
+    }
+
+    .title {
+        margin-top: 8px;
+    }
+
+    .types {
+        margin-top: 8px;
+    }
+
+    .img {
+        margin-top: 8px;
+        width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    .textBlock {
+        max-height: 200px;
+        overflow-y: hidden;
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .icon {
+        color: var(--secondary-color);
+        height: 24px;
+    }
+}
+
+.SMALL {
+    .imageWrapper {
+        width: 200px;
+        height: 200px;
+    }
+
+    .img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .infoWrapper {
+        margin-top: 8px;
+    }
+
+    .title {
+        margin-top: 8px;
+    }
+}

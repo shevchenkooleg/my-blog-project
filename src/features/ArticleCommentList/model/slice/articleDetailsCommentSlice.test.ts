@@ -33,8 +33,7 @@ describe('articleDetailsCommentSlice.test', () => {
                 id: '1',
                 user: {
                     id: 1,
-                    username: 'admin',
-                    avatar: "https://i.imgur.com/qw7CV6k.jpg"
+                    username: 'admin'
                 },
                 text: "Bla-bla"
             }], '', '1')
@@ -48,8 +47,7 @@ describe('articleDetailsCommentSlice.test', () => {
                         id: '1',
                         user: {
                             id: 1,
-                            username: 'admin',
-                            avatar: "https://i.imgur.com/qw7CV6k.jpg"
+                            username: 'admin'
                         },
                         text: "Bla-bla"
                     }
