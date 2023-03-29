@@ -4,6 +4,7 @@ import { type StateSchema } from "app/providers/StoreProvider";
 import { type Article, ArticleView } from "entities/Article";
 import { fetchArticlesList } from "../services/fetchArticlesList/fetchArticlesList";
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from "shared/const/localstorage";
+import { PAGE_SCROLL_VARIABLE_BIG_VIEW, PAGE_SCROLL_VARIABLE_SMALL_VIEW } from "shared/const/common";
 
 const articlesAdapter = createEntityAdapter<Article>({
     selectId: (article) => article.id
@@ -20,7 +21,9 @@ export const articlesPageSlice = createSlice({
         isLoading: false,
         ids: [],
         entities: {},
-        view: ArticleView.SMALL
+        view: ArticleView.SMALL,
+        page: 1,
+        hasMore: true
     }),
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
@@ -28,7 +31,13 @@ export const articlesPageSlice = createSlice({
             localStorage.setItem(ARTICLES_VIEW_LOCALSTORAGE_KEY, action.payload)
         },
         initState: (state) => {
-            state.view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView
+            const view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView
+            state.view = view
+            state.limit = view === ArticleView.SMALL ? PAGE_SCROLL_VARIABLE_SMALL_VIEW : PAGE_SCROLL_VARIABLE_BIG_VIEW
+        },
+        setPage: (state, action: PayloadAction<number>) => {
+            console.log('setPage action.payload', action.payload)
+            state.page = action.payload
         }
     },
     extraReducers: (builder) => {
@@ -41,7 +50,12 @@ export const articlesPageSlice = createSlice({
                 state,
                 action: PayloadAction<Article[]>) => {
                 state.isLoading = false
-                articlesAdapter.setAll(state, action.payload)
+                articlesAdapter.addMany(state, action.payload)
+                if (state.view === ArticleView.SMALL) {
+                    state.hasMore = action.payload.length > PAGE_SCROLL_VARIABLE_SMALL_VIEW - 1
+                } else {
+                    state.hasMore = action.payload.length > PAGE_SCROLL_VARIABLE_BIG_VIEW - 1
+                }
             })
             .addCase(fetchArticlesList.rejected, (state, action) => {
                 state.isLoading = false

@@ -21,6 +21,7 @@ import { Text, TextTheme } from "shared/ui/Text/Text";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
+import { Page } from "shared/ui/Page/Page";
 
 
 const reducers: ReducerList = {
@@ -109,7 +110,7 @@ const ProfilePage: FC<ProfilePageProps> = (props) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={true}>
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <ProfilePageHeader/>
                 {validateErrors?.length && validateErrors.map((err, i) =>
                     <Text theme={TextTheme.ERROR} text={validateErrorsTranslates[err]} key={i}/>)}
@@ -127,7 +128,7 @@ const ProfilePage: FC<ProfilePageProps> = (props) => {
                     onChangeCurrency={onChangeCurrency}
                     onChangeCountry={onChangeCountry}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };

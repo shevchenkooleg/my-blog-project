@@ -144,6 +144,7 @@ Small.args = {
 };
 export const Small_Loading = Template.bind({});
 Small_Loading.args = {
+    articles: [],
     isLoading: true
 };
 
@@ -157,6 +158,7 @@ Big.decorators = [ThemeDecorator(Theme.DARK)]
 export const Big_Loading = Template.bind({});
 Big_Loading.args = {
     view: ArticleView.BIG,
+    articles: [],
     isLoading: true
 };
 Big_Loading.decorators = [ThemeDecorator(Theme.DARK)]
