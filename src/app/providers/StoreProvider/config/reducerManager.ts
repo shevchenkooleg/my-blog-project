@@ -2,7 +2,6 @@ import { type AnyAction, combineReducers, type Reducer, type ReducersMapObject }
 import { type ReducerManager, type StateSchema, type StateSchemaKey } from "./StateSchema";
 
 
-
 export function createReducerManager (initialReducers: ReducersMapObject<StateSchema>): ReducerManager {
     const reducers = { ...initialReducers }
 
