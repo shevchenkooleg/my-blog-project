@@ -6,11 +6,13 @@ import { profileReducer } from "entities/Profile";
 import { articleDetailsReducer } from "entities/Article/model/slice/articleDetailsSlice";
 import { addCommentFormReducer } from "features/AddCommentForm/model/slice/addCommentFormSlice";
 import { userReducer } from "entities/User";
+import { pageSliceReducer } from "widgets/Page";
 
 const defaultAsyncReducers: ReducerList = {
     loginForm: loginReducer,
     profile: profileReducer,
     user: userReducer,
+    page: pageSliceReducer,
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer
 }

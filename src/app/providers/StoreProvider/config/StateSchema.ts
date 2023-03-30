@@ -14,11 +14,14 @@ import { type ArticleDetailsSchema } from "entities/Article";
 import { type ArticleDetailsCommentSchema } from "features/ArticleCommentList";
 import { type AddCommentFormSchema } from "features/AddCommentForm";
 import { type ArticlesPageSchema } from "pages/ArticlesPage";
+import { type PageSchema } from "widgets/Page";
+
 
 
 export interface StateSchema {
     counter: CounterSchema
     user: UserSchema
+    page: PageSchema
 
     // Async reducers
     loginForm?: LoginSchema

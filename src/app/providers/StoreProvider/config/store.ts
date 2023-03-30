@@ -4,6 +4,7 @@ import { counterReducer } from "entities/Counter";
 import { userReducer } from "entities/User";
 import { createReducerManager } from "app/providers/StoreProvider/config/reducerManager";
 import { $api } from 'shared/api/api';
+import { pageSliceReducer } from "widgets/Page";
 
 export function createReduxStore (
     initialState?: StateSchema,
@@ -12,7 +13,8 @@ export function createReduxStore (
     const rootReducer: ReducersMapObject<StateSchema> = {
         ...asyncReducers,
         counter: counterReducer,
-        user: userReducer
+        user: userReducer,
+        page: pageSliceReducer
     }
 
     const reducerManager = createReducerManager(rootReducer)

@@ -13,7 +13,7 @@ import {
     getArticlesPageView
 } from "../model/selectors/artcilesPageSelectors";
 import { ArticleViewSelector } from "features/ArticleViewSelector";
-import { Page } from "shared/ui/Page/Page";
+import { Page } from "widgets/Page/ui/Page";
 import { fetchNextArticlePage } from "../model/services/fetchNextArticlePage/fetchNextArticlePage";
 import { useTranslation } from "react-i18next";
 import { initArticlesPage } from "../model/services/initArticlesPage/initArticlesPage";
