@@ -6,11 +6,13 @@ import ListIcon from 'shared/assets/icons/List-icon.svg'
 import TiledIcon from 'shared/assets/icons/Tiled-icon.svg'
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
 import { Icon } from "shared/ui/Icon/Icon";
+import { useSelector } from "react-redux";
+import { getArticlesPageFiltersPageView } from "../../model/selectors/articlesPageFiltersSelectors";
+import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
+import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 
 interface ArticleViewSelectorProps {
     className?: string
-    view: ArticleView
-    onViewClick?: (newView: ArticleView) => void
 }
 
 
@@ -26,10 +28,12 @@ const viewTypes = [
 ]
 
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
-    const { className, view, onViewClick } = props
+    const { className } = props
+    const view = useSelector(getArticlesPageFiltersPageView)
+    const dispatch = useAppDispatch()
 
     const onClick = (newView: ArticleView) => () => {
-        onViewClick?.(newView)
+        dispatch(articlesPageFiltersActions.setView(newView))
     }
 
     return (

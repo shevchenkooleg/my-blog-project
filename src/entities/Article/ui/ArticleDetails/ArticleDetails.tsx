@@ -14,7 +14,7 @@ import { Avatar } from "shared/ui/Avatar/Avatar";
 import EyeIcon from 'shared/assets/icons/Eye-Icon.svg'
 import CalendarIcon from 'shared/assets/icons/Calendar-Icon.svg'
 import { Icon } from "shared/ui/Icon/Icon";
-import { type ArticleBlock, ArticleBlockType } from "../../model/types/artiicle";
+import { type ArticleBlock, ArticleBlockType } from "../../model/types/article";
 import { ArticleCodeBlockComponent } from "../ArticleCodeBlockComponent/ArticleCodeBlockComponent";
 import { ArticleImageBlockComponent } from "../ArticleImageBlockComponent/ArticleImageBlockComponent";
 import { ArticleTextBlockComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";

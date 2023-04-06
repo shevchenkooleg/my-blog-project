@@ -2,12 +2,12 @@ import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
 import { Theme } from "app/providers/ThemeProvider";
 import { ArticleViewSelector } from './ArticleViewSelector';
-import { ArticleView } from "entities/Article";
+import { StoreDecorator } from "shared/config/storybook/Decorators/StoreDecorator";
 
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'features/ArticleViewSelector',
+    title: 'features/ArticlePageFilters/ArticleViewSelector',
     component: ArticleViewSelector,
     argTypes: {
         backgroundColor: { control: 'color' }
@@ -18,11 +18,10 @@ const Template: ComponentStory<typeof ArticleViewSelector> = (args) => <ArticleV
 
 export const Primary = Template.bind({});
 Primary.args = {
-    view: ArticleView.BIG
 };
+Primary.decorators = [StoreDecorator({})]
 
 export const Dark = Template.bind({});
 Dark.args = {
-    view: ArticleView.BIG
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [StoreDecorator({}), ThemeDecorator(Theme.DARK)]

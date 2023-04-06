@@ -116,7 +116,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     onChange={onChangeUsername}
                 />
                 <Input
-                    value={data?.avatar}
+                    value={__PROJECT__ === 'storybook' ? '' : data?.avatar}
                     placeholder={t('Аватар')}
                     className={cls.input}
                     readOnly={readOnly}

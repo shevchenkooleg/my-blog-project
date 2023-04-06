@@ -2,7 +2,7 @@ import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
 import { Theme } from "app/providers/ThemeProvider";
 import { ArticleListItem } from './ArticleListItem';
-import { type Article, ArticleView } from "../../model/types/artiicle";
+import { type Article, ArticleView } from "../../model/types/article";
 
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions

@@ -1,5 +1,5 @@
 import { type Article, type ArticleDetailsSchema } from "entities/Article";
-import { ArticleBlockType, ArticleType } from "entities/Article/model/types/artiicle";
+import { ArticleBlockType, ArticleType } from "entities/Article/model/types/article";
 import { articleDetailsReducer } from "entities/Article/model/slice/articleDetailsSlice";
 import { fetchArticleById } from "../services/fetchArticleData/fetchArticleById";
 

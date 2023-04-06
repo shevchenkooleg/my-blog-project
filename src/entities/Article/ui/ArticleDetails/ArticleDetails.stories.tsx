@@ -4,7 +4,7 @@ import { Theme } from "app/providers/ThemeProvider";
 import { ArticleDetails } from './ArticleDetails';
 import { StoreDecorator } from "shared/config/storybook/Decorators/StoreDecorator";
 import { type Article } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from "../../model/types/artiicle";
+import { ArticleBlockType, ArticleType } from "../../model/types/article";
 
 
 const article: Article = {

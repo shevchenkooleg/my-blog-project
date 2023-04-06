@@ -3,7 +3,6 @@ import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorato
 import { Theme } from "app/providers/ThemeProvider";
 import ArticlesPage from './ArticlesPage';
 import { StoreDecorator } from "shared/config/storybook/Decorators/StoreDecorator";
-import { ArticleView } from 'entities/Article/model/types/artiicle';
 
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
@@ -26,7 +25,6 @@ Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
     articlesPage: {
         isLoading: false,
-        view: ArticleView.SMALL,
         error: '',
         ids: ['1', '2', '3', '4', '5', '6']
         // entities: [{

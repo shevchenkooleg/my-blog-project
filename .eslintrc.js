@@ -35,6 +35,7 @@ module.exports = {
         '@typescript-eslint/indent': [2, 4],
         indent: 'off',
         '@typescript-eslint/strict-boolean-expressions': 'off',
+        '@typescript-eslint/array-type': 'off',
         '@typescript-eslint/no-invalid-void-type': 'off',
         '@typescript-eslint/no-array-constructor': 'off',
         '@typescript-eslint/semi': 'off',

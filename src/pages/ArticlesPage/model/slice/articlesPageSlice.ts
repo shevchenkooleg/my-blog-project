@@ -3,7 +3,6 @@ import { type ArticlesPageSchema } from "../types/articlesPageSchema";
 import { type StateSchema } from "app/providers/StoreProvider";
 import { type Article, ArticleView } from "entities/Article";
 import { fetchArticlesList } from "../services/fetchArticlesList/fetchArticlesList";
-import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from "shared/const/localstorage";
 import { PAGE_SCROLL_VARIABLE_BIG_VIEW, PAGE_SCROLL_VARIABLE_SMALL_VIEW } from "shared/const/common";
 
 const articlesAdapter = createEntityAdapter<Article>({
@@ -14,6 +13,11 @@ export const getArticles = articlesAdapter.getSelectors<StateSchema>(
     (state) => state.articlesPage || articlesAdapter.getInitialState()
 )
 
+export interface FetchArticlesListPayload {
+    data: Article[]
+    view: ArticleView
+}
+
 export const articlesPageSlice = createSlice({
     name: 'articlesPageSlice',
     initialState: articlesAdapter.getInitialState<ArticlesPageSchema>({
@@ -21,20 +25,15 @@ export const articlesPageSlice = createSlice({
         isLoading: false,
         ids: [],
         entities: {},
-        view: ArticleView.SMALL,
         page: 1,
         hasMore: true,
         _isInit: false
     }),
     reducers: {
-        setView: (state, action: PayloadAction<ArticleView>) => {
-            state.view = action.payload
-            localStorage.setItem(ARTICLES_VIEW_LOCALSTORAGE_KEY, action.payload)
-        },
-        initState: (state) => {
-            const view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView
-            state.view = view
-            state.limit = view === ArticleView.SMALL ? PAGE_SCROLL_VARIABLE_SMALL_VIEW : PAGE_SCROLL_VARIABLE_BIG_VIEW
+        initState: (state, action: PayloadAction<ArticleView>) => {
+            state.limit = action.payload === ArticleView.SMALL
+                ? PAGE_SCROLL_VARIABLE_SMALL_VIEW
+                : PAGE_SCROLL_VARIABLE_BIG_VIEW
             state._isInit = true
         },
         setPage: (state, action: PayloadAction<number>) => {
@@ -44,19 +43,33 @@ export const articlesPageSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(fetchArticlesList.pending, (state) => {
+            .addCase(fetchArticlesList.pending, (
+                state,
+                action
+            ) => {
                 state.error = undefined
                 state.isLoading = true
+                if (action.meta.arg.replace) {
+                    articlesAdapter.removeAll(state)
+                }
             })
             .addCase(fetchArticlesList.fulfilled, (
                 state,
-                action: PayloadAction<Article[]>) => {
+                action
+            ) => {
                 state.isLoading = false
-                articlesAdapter.addMany(state, action.payload)
-                if (state.view === ArticleView.SMALL) {
-                    state.hasMore = action.payload.length > PAGE_SCROLL_VARIABLE_SMALL_VIEW - 1
+                articlesAdapter.addMany(state, action.payload.data)
+
+                if (action.meta.arg.replace) {
+                    articlesAdapter.setAll(state, action.payload.data)
                 } else {
-                    state.hasMore = action.payload.length > PAGE_SCROLL_VARIABLE_BIG_VIEW - 1
+                    articlesAdapter.addMany(state, action.payload.data)
+                }
+
+                if (action.payload.view === ArticleView.SMALL) {
+                    state.hasMore = action.payload.data.length > PAGE_SCROLL_VARIABLE_SMALL_VIEW - 1
+                } else {
+                    state.hasMore = action.payload.data.length > PAGE_SCROLL_VARIABLE_BIG_VIEW - 1
                 }
             })
             .addCase(fetchArticlesList.rejected, (state, action) => {

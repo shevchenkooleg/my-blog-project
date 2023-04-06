@@ -1,6 +1,6 @@
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails'
 
-export type { Article } from './model/types/artiicle'
+export type { Article } from './model/types/article'
 export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema'
 
 
@@ -9,4 +9,4 @@ export { getArticleDetailsIsLoading } from './model/selectors/getArticleDetailsI
 export { getArticleDetailsError } from './model/selectors/getArticleDetailsError/getArticleDetailsError'
 
 export { ArticleList } from './ui/ArticleList/ArticleList'
-export { ArticleView } from './model/types/artiicle'
+export { ArticleView } from './model/types/article'

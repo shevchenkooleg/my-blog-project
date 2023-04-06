@@ -15,7 +15,7 @@ import { type ArticleDetailsCommentSchema } from "features/ArticleCommentList";
 import { type AddCommentFormSchema } from "features/AddCommentForm";
 import { type ArticlesPageSchema } from "pages/ArticlesPage";
 import { type PageSchema } from "widgets/Page";
-
+import { type ArticlesPageFiltersSchema } from "features/ArticlesPageFilters";
 
 
 export interface StateSchema {
@@ -30,6 +30,7 @@ export interface StateSchema {
     articleDetailsComments?: ArticleDetailsCommentSchema
     addCommentForm?: AddCommentFormSchema
     articlesPage?: ArticlesPageSchema
+    articlesPageFilters?: ArticlesPageFiltersSchema
 
 }
 

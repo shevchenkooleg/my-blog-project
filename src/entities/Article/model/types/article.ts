@@ -7,6 +7,7 @@ export enum ArticleBlockType {
 }
 
 export enum ArticleType {
+    ALL = 'ALL',
     IT = 'IT',
     SCIENCE = 'SCIENCE',
     ECONOMIC = 'ECONOMIC'
@@ -15,6 +16,12 @@ export enum ArticleType {
 export enum ArticleView {
     BIG = 'BIG',
     SMALL = 'SMALL'
+}
+
+export enum ArticleSortField {
+    VIEWS = 'views',
+    CREATED = 'created',
+    TITLE = 'title'
 }
 
 

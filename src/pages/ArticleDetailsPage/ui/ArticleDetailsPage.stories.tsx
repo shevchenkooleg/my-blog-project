@@ -2,7 +2,7 @@ import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import ArticlesDetailsPage from './ArticleDetailsPage';
 import { StoreDecorator } from "shared/config/storybook/Decorators/StoreDecorator";
 import { type Article } from "entities/Article";
-import { ArticleBlockType, ArticleType } from "entities/Article/model/types/artiicle";
+import { ArticleBlockType, ArticleType } from "entities/Article/model/types/article";
 
 const article: Article = {
     id: "1",
