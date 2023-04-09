@@ -21,6 +21,10 @@ import { AddCommentForm } from "features/AddCommentForm";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import { Page } from "widgets/Page/ui/Page";
+import { ArticlePageRecommendations } from "features/ArticlePageRecommendations/ui/ArticlePageRecommendations";
+import {
+    fetchArticleRecommendations
+} from "features/ArticlePageRecommendations/model/services/fetchArticleRecommendations/fetchArticleRecommendations";
 
 interface ArticlesDetailsPageProps {
     className?: string
@@ -48,6 +52,7 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
 
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id))
+        dispatch(fetchArticleRecommendations())
     })
 
     if (!id) {
@@ -64,6 +69,7 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
             <Page className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
                 <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>{t('Назад к списку')}</Button>
                 <ArticleDetails id={id}/>
+                <ArticlePageRecommendations/>
                 <Text title={t('Комментарии')} className={cls.commentTitle}/>
                 <AddCommentForm onSendComment={onSendComment}/>
                 <CommentList comments={comments} isLoading={isLoading}/>

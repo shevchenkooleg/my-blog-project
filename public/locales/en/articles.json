@@ -19,5 +19,7 @@
   "Экономика": "Economics",
   "Наука": "Science",
   "Все статьи": "All articles",
-  "Статьи не найдены": "Articles not found"
+  "Статьи не найдены": "Articles not found",
+  "Рекомендуем": "Recommend",
+  "Непредвиденная ошибка на сервере": "Unexpected error on the server"
 }

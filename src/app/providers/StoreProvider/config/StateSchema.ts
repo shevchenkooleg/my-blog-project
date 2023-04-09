@@ -11,11 +11,14 @@ import {
 import { type ProfileSchema } from "entities/Profile";
 import { type AxiosInstance } from "axios";
 import { type ArticleDetailsSchema } from "entities/Article";
-import { type ArticleDetailsCommentSchema } from "features/ArticleCommentList";
+import {
+    type ArticleDetailsCommentSchema
+} from "features/ArticleCommentList";
 import { type AddCommentFormSchema } from "features/AddCommentForm";
 import { type ArticlesPageSchema } from "pages/ArticlesPage";
 import { type PageSchema } from "widgets/Page";
 import { type ArticlesPageFiltersSchema } from "features/ArticlesPageFilters";
+import { type ArticlePageRecommendationsSchema } from "features/ArticlePageRecommendations";
 
 
 export interface StateSchema {
@@ -28,6 +31,7 @@ export interface StateSchema {
     profile?: ProfileSchema
     articleDetails?: ArticleDetailsSchema
     articleDetailsComments?: ArticleDetailsCommentSchema
+    articleDetailsRecommendations?: ArticlePageRecommendationsSchema
     addCommentForm?: AddCommentFormSchema
     articlesPage?: ArticlesPageSchema
     articlesPageFilters?: ArticlesPageFiltersSchema

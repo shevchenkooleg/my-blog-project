@@ -30,7 +30,7 @@ export const ArticlePageFilters = memo((props: ArticlesSortFormProps) => {
     const debouncedFetchData = useDebounce(fetchData, 500)
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount={true}>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
                 <div className={cls.sortWrapper}>
                     <ArticleSortSelectors fetchData={debouncedFetchData} />

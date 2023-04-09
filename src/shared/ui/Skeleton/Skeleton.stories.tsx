@@ -6,7 +6,7 @@ import { Skeleton } from './Skeleton';
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'widgets/Skeleton',
+    title: 'shared/Skeleton',
     component: Skeleton,
     argTypes: {
         backgroundColor: { control: 'color' }

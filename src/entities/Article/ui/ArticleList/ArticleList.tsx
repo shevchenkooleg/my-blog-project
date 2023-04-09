@@ -1,6 +1,6 @@
 import cls from "./ArticleList.module.scss"
 import { classNames } from "shared/lib/classNames/classNames";
-import { memo } from "react";
+import { type HTMLAttributeAnchorTarget, memo } from "react";
 import type { Article } from "../../model/types/article";
 import { ArticleView } from "../../model/types/article";
 import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
@@ -13,6 +13,7 @@ interface ArticleListProps {
     articles: Article[]
     isLoading?: boolean
     view?: ArticleView
+    target?: HTMLAttributeAnchorTarget
 }
 
 const getSkeletons = (view: ArticleView) => {
@@ -27,6 +28,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         className,
         articles,
         isLoading,
+        target,
         view = ArticleView.SMALL
     } = props
     const { t } = useTranslation('articles')
@@ -38,11 +40,11 @@ export const ArticleList = memo((props: ArticleListProps) => {
             isLoading={isLoading}
             key={article.id}
             className={cls.card}
+            target={target}
         />
     )
 
     if (!isLoading && !articles.length) {
-        console.log('111')
         return <Text size={TextSize.L} className={cls.notFound} title={t('Статьи не найдены')}/>
     }
 

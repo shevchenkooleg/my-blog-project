@@ -40,6 +40,7 @@ export const articlesPageFiltersSlice = createSlice({
         builder
             .addCase(articlesPageActions.initState, (state) => {
                 const view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView
+                console.log('view', view)
                 state.view = view
             })
         // .addCase(loginByUsername.fulfilled, (state) => {
