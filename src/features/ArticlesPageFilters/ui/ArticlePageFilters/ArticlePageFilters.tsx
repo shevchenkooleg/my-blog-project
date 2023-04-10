@@ -23,6 +23,9 @@ export const ArticlePageFilters = memo((props: ArticlesSortFormProps) => {
     const { className } = props
     const dispatch = useAppDispatch()
 
+    // TODO 'разобраться со сбросом фильтров и перезапросом списка
+    //  статей при уходе со страницы articles page и возвращением обратно'
+
     const fetchData = useCallback(() => {
         dispatch(fetchArticlesList({ replace: true }))
     }, [dispatch])

@@ -1,8 +1,9 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
 import { Theme } from "app/providers/ThemeProvider";
-import { MainPage } from "pages/MainPage";
 import { StoreDecorator } from "shared/config/storybook/Decorators/StoreDecorator";
+import MainPage from './MainPage';
+
 
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
@@ -14,7 +15,7 @@ export default {
     }
 } as ComponentMeta<typeof MainPage>;
 
-const Template: ComponentStory<typeof MainPage> = (args) => <MainPage {...args}/>;
+const Template: ComponentStory<typeof MainPage> = (args) => <MainPage/>;
 
 export const Light = Template.bind({});
 Light.args = {};

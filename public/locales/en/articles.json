@@ -21,5 +21,8 @@
   "Все статьи": "All articles",
   "Статьи не найдены": "Articles not found",
   "Рекомендуем": "Recommend",
-  "Непредвиденная ошибка на сервере": "Unexpected error on the server"
+  "Непредвиденная ошибка на сервере": "Unexpected error on the server",
+  "Редактировать": "Edit",
+  "Редактирование статьи с ID ": "Edit article with ID ",
+  "Создание новой статьи": "Create new article"
 }
