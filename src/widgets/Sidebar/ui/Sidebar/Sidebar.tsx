@@ -23,7 +23,7 @@ export const Sidebar: FC<SidebarProps> = (props) => {
     const sidebarItemsList = useSelector(getSidebarItems)
 
     return (
-        <menu
+        <aside
             data-testid="sidebar"
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
         >
@@ -37,7 +37,7 @@ export const Sidebar: FC<SidebarProps> = (props) => {
             >
                 {collapsed ? '>' : "<"}
             </Button>
-            <VStack className={cls.items} gap={"16"}>
+            <VStack role={'navigation'} className={cls.items} gap={"16"}>
                 {sidebarItemsList.map((item) => (
                     <SidebarItem key={item.path} item={item} collapsed={collapsed}/>
                 ))}
@@ -46,6 +46,6 @@ export const Sidebar: FC<SidebarProps> = (props) => {
                 <ThemeSwitcher/>
                 <LangSwitcher className={cls.lang} short={collapsed}/>
             </div>
-        </menu>
+        </aside>
     );
 };

@@ -55,7 +55,7 @@ module.exports = {
         '@typescript-eslint/no-floating-promises': [0],
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'name', 'target', 'direction', 'justify', 'align', 'gap']
+            ignoreAttribute: ['data-testid', 'to', 'name', 'target', 'direction', 'justify', 'align', 'gap', 'role']
         }],
         'max-len': ['error', {
             ignoreComments: true,
