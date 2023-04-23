@@ -1,6 +1,6 @@
-import { type Article, type ArticleDetailsSchema } from "entities/Article";
-import { ArticleBlockType, ArticleType } from "entities/Article/model/types/article";
-import { articleDetailsReducer } from "entities/Article/model/slice/articleDetailsSlice";
+import { type Article, type ArticleDetailsSchema } from "../../index";
+import { ArticleBlockType, ArticleType } from "../types/article";
+import { articleDetailsReducer } from "./articleDetailsSlice";
 import { fetchArticleById } from "../services/fetchArticleData/fetchArticleById";
 
 

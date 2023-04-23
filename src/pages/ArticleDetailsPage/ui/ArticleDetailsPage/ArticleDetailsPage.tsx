@@ -25,7 +25,8 @@ import {
 } from "features/ArticlePageRecommendations/model/services/fetchArticleRecommendations/fetchArticleRecommendations";
 import {
     ArticleDetailsPageHeader
-} from "pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader";
+} from "../ArticleDetailsPageHeader/ArticleDetailsPageHeader";
+import { VStack } from "shared/ui/Stack";
 
 interface ArticlesDetailsPageProps {
     className?: string
@@ -64,12 +65,16 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
 
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={true}>
             <Page className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
-                <ArticleDetailsPageHeader/>
-                <ArticleDetails id={id}/>
-                <ArticlePageRecommendations/>
-                <Text title={t('Комментарии')} className={cls.commentTitle}/>
-                <AddCommentForm onSendComment={onSendComment}/>
-                <CommentList comments={comments} isLoading={isLoading}/>
+                <VStack gap={'8'} max>
+                    <ArticleDetailsPageHeader/>
+                    <ArticleDetails id={id}/>
+                    <ArticlePageRecommendations/>
+                    <VStack max>
+                        <Text title={t('Комментарии')}/>
+                        <AddCommentForm onSendComment={onSendComment}/>
+                    </VStack>
+                    <CommentList comments={comments} isLoading={isLoading}/>
+                </VStack>
             </Page>
         </DynamicModuleLoader>
     );

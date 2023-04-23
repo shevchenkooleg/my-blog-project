@@ -1,10 +1,10 @@
 import { createEntityAdapter, createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { type StateSchema } from "app/providers/StoreProvider";
 import { type Article } from 'entities/Article';
-import { type ArticlePageRecommendationsSchema } from "features/ArticlePageRecommendations";
+import { type ArticlePageRecommendationsSchema } from "../types/ArticlePageRecommendationsSchema";
 import {
     fetchArticleRecommendations
-} from "features/ArticlePageRecommendations/model/services/fetchArticleRecommendations/fetchArticleRecommendations";
+} from "../services/fetchArticleRecommendations/fetchArticleRecommendations";
 
 
 const recommendationAdapter = createEntityAdapter<Article>({

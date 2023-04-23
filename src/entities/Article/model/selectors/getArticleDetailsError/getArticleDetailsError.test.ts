@@ -1,4 +1,4 @@
-import { getArticleDetailsError } from "entities/Article";
+import { getArticleDetailsError } from "./getArticleDetailsError";
 import { type StateSchema } from "app/providers/StoreProvider";
 
 describe('getArticleDetailsError.test', () => {

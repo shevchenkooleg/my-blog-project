@@ -1,5 +1,5 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import { Avatar } from "shared/ui/Avatar/Avatar";
+import { Avatar } from "./Avatar";
 import avatarImg from '../../assets/tests/storybook.png'
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions

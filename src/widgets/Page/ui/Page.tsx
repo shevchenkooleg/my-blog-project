@@ -7,7 +7,7 @@ import { pageSliceActions } from "../model/slice/pageSlice";
 import { useLocation } from "react-router-dom";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { useSelector } from "react-redux";
-import { getScrollPositionByPath } from "widgets/Page/model/selectors/pageSelectors";
+import { getScrollPositionByPath } from "../model/selectors/pageSelectors";
 import { type StateSchema } from "app/providers/StoreProvider";
 import { useThrottle } from "shared/lib/hooks/useThrottle/useThrottle";
 

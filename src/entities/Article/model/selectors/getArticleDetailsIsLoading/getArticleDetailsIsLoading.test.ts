@@ -1,5 +1,5 @@
 import { type StateSchema } from "app/providers/StoreProvider";
-import { getArticleDetailsIsLoading } from "entities/Article";
+import { getArticleDetailsIsLoading } from "./getArticleDetailsIsLoading";
 
 describe('getArticleDetailsIsLoading.test', () => {
     test('should return articleIsLoading', () => {

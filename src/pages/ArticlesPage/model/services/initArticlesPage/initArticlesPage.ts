@@ -1,6 +1,6 @@
-import { getArticlesPageIsInit } from "pages/ArticlesPage/model/selectors/artcilesPageSelectors";
-import { articlesPageActions } from "pages/ArticlesPage/model/slice/articlesPageSlice";
-import { fetchArticlesList } from "pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList";
+import { getArticlesPageIsInit } from "../../selectors/artcilesPageSelectors";
+import { articlesPageActions } from "../../slice/articlesPageSlice";
+import { fetchArticlesList } from "../fetchArticlesList/fetchArticlesList";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { type ThunkConfig } from "app/providers/StoreProvider/config/StateSchema";
 import { getArticlesPageFiltersPageView } from "features/ArticlesPageFilters";

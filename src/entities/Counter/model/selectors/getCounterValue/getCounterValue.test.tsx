@@ -1,8 +1,8 @@
-import { getCounterValue } from "entities/Counter/model/selectors/getCounterValue/getCounterValue";
+import { getCounterValue } from "./getCounterValue";
 import { type StateSchema } from "app/providers/StoreProvider";
 import { componentRender } from "shared/lib/test/componentRender/componentRender";
 import { screen } from "@testing-library/react";
-import { Counter } from "entities/Counter";
+import { Counter } from "../../../ui/Counter";
 import { userEvent } from "@storybook/testing-library";
 
 

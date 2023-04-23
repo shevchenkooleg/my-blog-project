@@ -19,6 +19,7 @@ import { ArticleCodeBlockComponent } from "../ArticleCodeBlockComponent/ArticleC
 import { ArticleImageBlockComponent } from "../ArticleImageBlockComponent/ArticleImageBlockComponent";
 import { ArticleTextBlockComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
+import { HStack, VStack } from "shared/ui/Stack";
 
 interface ArticleDetailsProps {
     className?: string
@@ -58,13 +59,15 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     if (isLoading) {
         content = (
-            <>
-                <Skeleton className={cls.avatar} width={200} height={200} border={'50%'} />
+            <VStack gap={'16'}>
+                <HStack justify={'center'} max>
+                    <Skeleton className={cls.avatar} width={200} height={200} border={'50%'} />
+                </HStack>
                 <Skeleton className={cls.title} width={300} height={32} />
                 <Skeleton className={cls.skeleton} width={600} height={24} />
                 <Skeleton className={cls.skeleton} width={'100%'} height={200} />
                 <Skeleton className={cls.skeleton} width={'100%'} height={200} />
-            </>
+            </VStack>
         )
     } else if (error) {
         content = (
@@ -72,30 +75,32 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
         )
     } else {
         content = (
-            <>
-                <div className={cls.avatarWrapper}>
+            <VStack gap={'16'}>
+                <HStack justify={'center'} max>
                     <Avatar
                         size={200}
                         avatar={article?.img}
                         className={cls.avatar}
                     />
-                </div>
+                </HStack>
                 <Text
                     size={TextSize.L}
                     className={cls.title}
                     title={article?.title}
                     text={article?.subtitle}
                 />
-                <div className={cls.articleInfo}>
-                    <Icon Svg={EyeIcon} className={cls.icon}/>
-                    <Text text={String(article?.views)}/>
-                </div>
-                <div className={cls.articleInfo}>
-                    <Icon Svg={CalendarIcon} className={cls.icon}/>
-                    <Text text={article?.createdAt}/>
-                </div>
+                <VStack>
+                    <HStack gap={'16'} className={cls.articleInfo}>
+                        <Icon Svg={EyeIcon} className={cls.icon}/>
+                        <Text text={String(article?.views)}/>
+                    </HStack>
+                    <HStack gap={'16'} className={cls.articleInfo}>
+                        <Icon Svg={CalendarIcon} className={cls.icon}/>
+                        <Text text={article?.createdAt}/>
+                    </HStack>
+                </VStack>
                 {article?.blocks.map(renderBlock)}
-            </>
+            </VStack>
         )
     }
 

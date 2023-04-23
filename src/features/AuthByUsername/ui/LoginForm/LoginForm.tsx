@@ -15,7 +15,7 @@ import { getLoginError } from "../../model/selectors/getLoginError/getLoginError
 import { DynamicModuleLoader, type ReducerList } from "shared/components/DynamicModuleLoader";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { type StateSchema } from "app/providers/StoreProvider";
-import { type LoginSchema } from "features/AuthByUsername";
+import { type LoginSchema } from "../../model/types/loginSchema";
 
 export interface LoginFormProps {
     className?: string

@@ -1,5 +1,5 @@
 import { TestAsyncThunk } from "shared/lib/test/TestAsyncThunk/TestAsyncThunk";
-import { addCommentForArticle } from "features/ArticleCommentList";
+import { addCommentForArticle } from "./addCommentForArticle";
 import { type Comment } from "entities/Comment";
 
 const commentData: Comment = {

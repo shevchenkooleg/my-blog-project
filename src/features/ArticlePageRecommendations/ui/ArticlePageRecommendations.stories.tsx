@@ -2,6 +2,7 @@ import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
 import { Theme } from "app/providers/ThemeProvider";
 import { ArticlePageRecommendations } from './ArticlePageRecommendations';
+import { StoreDecorator } from "shared/config/storybook/Decorators/StoreDecorator";
 
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
@@ -17,7 +18,8 @@ const Template: ComponentStory<typeof ArticlePageRecommendations> = (args) => <A
 
 export const Primary = Template.bind({});
 Primary.args = {};
+Primary.decorators = [StoreDecorator({})]
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})]

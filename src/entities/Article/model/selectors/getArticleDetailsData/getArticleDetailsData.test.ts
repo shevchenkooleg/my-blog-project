@@ -1,6 +1,6 @@
 import { type StateSchema } from "app/providers/StoreProvider";
-import { type Article, getArticleDetailsData } from "entities/Article";
-import { ArticleBlockType, ArticleType } from "entities/Article/model/types/article";
+import { type Article, getArticleDetailsData } from "../../../index";
+import { ArticleBlockType, ArticleType } from "../../types/article";
 
 describe('getArticleDetailsData.test', () => {
     test('should return articleDetailsData', () => {

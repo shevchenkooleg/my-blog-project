@@ -114,7 +114,7 @@ const article: Article = {
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'pages/ArticleDetailsPage',
+    title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
     component: ArticlesDetailsPage,
     argTypes: {
         backgroundColor: { control: 'color' }

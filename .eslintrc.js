@@ -29,7 +29,13 @@ module.exports = {
             version: 'detect'
         }
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+    plugins: [
+        'react',
+        '@typescript-eslint',
+        'i18next',
+        'react-hooks',
+        'path-import-validation-plugin'
+    ],
     parser: '@typescript-eslint/parser',
     rules: {
         '@typescript-eslint/indent': [2, 4],
@@ -49,7 +55,7 @@ module.exports = {
         '@typescript-eslint/no-floating-promises': [0],
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'name', 'target']
+            ignoreAttribute: ['data-testid', 'to', 'name', 'target', 'direction', 'justify', 'align', 'gap']
         }],
         'max-len': ['error', {
             ignoreComments: true,
@@ -57,7 +63,8 @@ module.exports = {
         }],
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
-        'promise/param-names': 'off'
+        'promise/param-names': 'off',
+        'path-import-validation-plugin/relative-path-import-checker': 'error'
     },
     globals: {
         __IS_DEV__: true,

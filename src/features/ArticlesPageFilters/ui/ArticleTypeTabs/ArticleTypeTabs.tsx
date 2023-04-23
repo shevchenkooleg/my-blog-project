@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 import { memo, useMemo } from "react";
 import { type TabItem, Tabs } from "shared/ui/Tabs/Tabs";
 import { useSelector } from "react-redux";
-import { getArticlesPageFiltersType } from "features/ArticlesPageFilters/model/selectors/articlesPageFiltersSelectors";
+import { getArticlesPageFiltersType } from "../../model/selectors/articlesPageFiltersSelectors";
 import { ArticleType } from "entities/Article/model/types/article";
-import { articlesPageFiltersActions } from "features/ArticlesPageFilters/model/slice/articlesPageFiltersSlice";
+import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
 import { articlesPageActions } from "pages/ArticlesPage/model/slice/articlesPageSlice";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 

@@ -2,10 +2,10 @@ import cls from "./SidebarItem.module.scss"
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import { memo } from "react";
+import { memo, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getUserAuthData } from "entities/User";
-import { type SidebarItemType } from "widgets/Sidebar/model/types/sidebar";
+import { type SidebarItemType } from "../../model/types/sidebar";
 
 interface SidebarItemProps {
     collapsed: boolean
@@ -17,6 +17,22 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
     const { collapsed, item } = props
     const isAuth = useSelector(getUserAuthData)
 
+    const [show, setShow] = useState(true)
+
+    useEffect(() => {
+        let timer: NodeJS.Timeout
+
+        if (collapsed) {
+            setShow(false)
+        } else {
+            timer = setTimeout(() => {
+                setShow(true)
+            }, 250)
+        }
+
+        return () => { clearTimeout(timer) }
+    }, [collapsed])
+
     if (item.authOnly && !isAuth?.id) {
         return null
     }
@@ -26,10 +42,9 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
             <AppLink
                 theme={AppLinkTheme.SECONDARY}
                 to={item.path}
-                className={classNames(cls.item)}
             >
                 <item.Icon className={cls.icon}/>
-                <span className={classNames(cls.link)}>{t(`${item.text}`)}</span>
+                {show && <span className={classNames(cls.link)}>{t(`${item.text}`)}</span>}
             </AppLink>
         </div>
     );

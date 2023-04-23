@@ -1,5 +1,5 @@
 import { articleDetailsCommentReducer } from "./articleDetailsCommentSlice";
-import { type ArticleDetailsCommentSchema, fetchCommentsByArticleId } from "features/ArticleCommentList";
+import { type ArticleDetailsCommentSchema, fetchCommentsByArticleId } from "../../index";
 
 describe('articleDetailsCommentSlice.test', () => {
     test('test fetchCommentsByArticleId service pending', () => {

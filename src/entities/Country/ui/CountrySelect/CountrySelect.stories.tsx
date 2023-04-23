@@ -1,5 +1,5 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import { CountrySelect } from "entities/Country/ui/CountrySelect/CountrySelect";
+import { CountrySelect } from "./CountrySelect";
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {

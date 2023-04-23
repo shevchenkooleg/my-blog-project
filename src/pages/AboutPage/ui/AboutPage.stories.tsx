@@ -1,5 +1,5 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
-import AboutPage from "pages/AboutPage/ui/AboutPage";
+import AboutPage from "./AboutPage";
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
 import { Theme } from "app/providers/ThemeProvider";
 import { StoreDecorator } from "shared/config/storybook/Decorators/StoreDecorator";
