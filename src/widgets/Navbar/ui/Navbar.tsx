@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Dropdown } from "shared/ui/Dropdown/Dropdown";
+import { Avatar } from "shared/ui/Avatar/Avatar";
 
 interface NavbarProps {
     className?: string
@@ -28,6 +30,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     }, [])
 
     const logOut = useCallback(() => {
+        console.log('logout')
         dispatch(userActions.logout())
         setIsAuthModal(false)
     }, [dispatch])
@@ -42,14 +45,21 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 <AppLink className={cls.createLink} theme={AppLinkTheme.SECONDARY} to={RoutePath.article_create}>
                     {t('Создать статью')}
                 </AppLink>
-                <div className={classNames(cls.links)}>
-                    <Button
-                        theme={ButtonTheme.CLEAR_INVERTED}
-                        onClick={logOut}
-                    >
-                        {t('Выйти')}
-                    </Button>
-                </div>
+                <Dropdown
+                    className={cls.dropdown}
+                    items={[
+                        {
+                            content: t('Профиль пользователя'),
+                            href: RoutePath.profile + String(authData.id)
+                        },
+                        {
+                            content: t('Выйти'),
+                            onClick: logOut
+                        }
+                    ]}
+                    trigger={<Avatar size={40} avatar={authData.avatar}/>}
+                    direction={'bottom left'}
+                />
             </header>
         );
     } else {
