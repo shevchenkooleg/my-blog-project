@@ -13,11 +13,11 @@ export default {
     }
 } as ComponentMeta<typeof ArticleDetailsComments>;
 
-const Template: ComponentStory<typeof ArticleDetailsComments> = (args) => <ArticleDetailsComments />;
+const Template: ComponentStory<typeof ArticleDetailsComments> = (args) => <ArticleDetailsComments {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = { id: '1' };
 
 export const Dark = Template.bind({});
-Dark.args = {};
+Dark.args = { id: '1' };
 Dark.decorators = [ThemeDecorator(Theme.DARK)]
