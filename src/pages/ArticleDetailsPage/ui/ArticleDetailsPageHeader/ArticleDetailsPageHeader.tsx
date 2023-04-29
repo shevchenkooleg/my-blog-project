@@ -27,7 +27,7 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
     }, [article?.id, navigate])
 
     return (
-        <HStack justify={'between'} className={classNames('', {}, [className])}>
+        <HStack justify={'between'} max className={classNames('', {}, [className])}>
             <Button
                 theme={ButtonTheme.OUTLINE}
                 onClick={onBackToList}

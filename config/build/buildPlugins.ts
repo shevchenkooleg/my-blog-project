@@ -27,11 +27,6 @@ export function buildPlugins ({ paths, isDev, apiUrl, project }: BuildOptions): 
             ]
         })
     ]
-
-    // plugins.push(new BundleAnalyzerPlugin({
-    //     // openAnalyzer: false
-    // }))
-
     if (isDev) {
         // plugins.push(new webpack.HotModuleReplacementPlugin())
         plugins.push(new ReactRefreshWebpackPlugin())
@@ -40,6 +35,10 @@ export function buildPlugins ({ paths, isDev, apiUrl, project }: BuildOptions): 
         }))
     }
 
+
+    // plugins.push(new BundleAnalyzerPlugin({
+    //     openAnalyzer: true
+    // }))
 
     return plugins
 }

@@ -18,20 +18,20 @@ import { type AddCommentFormSchema } from "features/AddCommentForm";
 import { type ArticlesPageSchema } from "pages/ArticlesPage";
 import { type PageSchema } from "widgets/Page";
 import { type ArticlesPageFiltersSchema } from "features/ArticlesPageFilters";
-import { type ArticlePageRecommendationsSchema } from "features/ArticlePageRecommendations";
+import { type rtkApi } from "shared/api/rtkApi";
 
 
 export interface StateSchema {
     counter: CounterSchema
     user: UserSchema
     page: PageSchema
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
 
     // Async reducers
     loginForm?: LoginSchema
     profile?: ProfileSchema
     articleDetails?: ArticleDetailsSchema
     articleDetailsComments?: ArticleDetailsCommentSchema
-    articleDetailsRecommendations?: ArticlePageRecommendationsSchema
     addCommentForm?: AddCommentFormSchema
     articlesPage?: ArticlesPageSchema
     articlesPageFilters?: ArticlesPageFiltersSchema

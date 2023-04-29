@@ -19,10 +19,8 @@ import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEf
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { AddCommentForm } from "features/AddCommentForm";
 import { Page } from "widgets/Page/ui/Page";
-import { ArticlePageRecommendations } from "features/ArticlePageRecommendations/ui/ArticlePageRecommendations";
-import {
-    fetchArticleRecommendations
-} from "features/ArticlePageRecommendations/model/services/fetchArticleRecommendations/fetchArticleRecommendations";
+import { ArticleRecommendationsList } from "features/ArticleRecommendationsList/ui/ArticleRecommendationsList";
+
 import {
     ArticleDetailsPageHeader
 } from "../ArticleDetailsPageHeader/ArticleDetailsPageHeader";
@@ -50,7 +48,6 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
 
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id))
-        dispatch(fetchArticleRecommendations())
     })
 
     if (!id) {
@@ -65,10 +62,10 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
 
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={true}>
             <Page className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
-                <VStack gap={'8'} max>
+                <VStack gap={'16'} max>
                     <ArticleDetailsPageHeader/>
                     <ArticleDetails id={id}/>
-                    <ArticlePageRecommendations/>
+                    <ArticleRecommendationsList/>
                     <VStack max>
                         <Text title={t('Комментарии')}/>
                         <AddCommentForm onSendComment={onSendComment}/>

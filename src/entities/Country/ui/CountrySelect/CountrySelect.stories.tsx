@@ -7,7 +7,16 @@ export default {
     component: CountrySelect,
     argTypes: {
         backgroundColor: { control: 'color' }
-    }
+    },
+    decorators: [
+        Story => <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100vh',
+            width: '100%'
+        }}><Story/></div>
+    ]
 } as ComponentMeta<typeof CountrySelect>;
 
 const Template: ComponentStory<typeof CountrySelect> = (args) => <CountrySelect {...args} />;
