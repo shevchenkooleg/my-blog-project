@@ -7,7 +7,7 @@ import { type Comment } from './../../model/types/comment'
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'entities/CommentCard',
+    title: 'entities/Comment/CommentCard',
     component: CommentCard,
     argTypes: {
         backgroundColor: { control: 'color' }

@@ -35,7 +35,10 @@ export const Page = (props: PageProps) => {
         wrapperRef.current.scrollTop = scrollPosition
     })
 
+    // TODO fix restore scroll position feature
+
     const onScroll = useThrottle((e: React.UIEvent<HTMLDivElement>) => {
+        console.log(e.currentTarget.scrollTop)
         dispatch(pageSliceActions.setScrollPosition({ position: e.currentTarget.scrollTop, path: pathname }))
     }, 500)
 

@@ -13,7 +13,7 @@ interface ArticlePageRecommendationProps {
 export const ArticleRecommendationsList = memo((props: ArticlePageRecommendationProps) => {
     const { t } = useTranslation('articles')
     const { className } = props
-    const { isLoading, data, error } = useArticleRecommendationsList(3)
+    const { isLoading, data: articles, error } = useArticleRecommendationsList(3)
 
     if (isLoading) {
         return (
@@ -41,7 +41,7 @@ export const ArticleRecommendationsList = memo((props: ArticlePageRecommendation
                 title={t('Рекомендуем')}
             />
             <ArticleList
-                articles={data}
+                articles={articles}
                 target={"_blank"}
             />
         </div>
