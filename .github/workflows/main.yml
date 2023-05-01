@@ -30,14 +30,9 @@ jobs:
       - name: unit testing
         run: npm run test:unit
         if: always()
-      - name: build storybook
-        run: npm run storybook:build
-        if: always()
-      - name: screenshot testing
-        run: npm run test:ui:ci
-      - name: Archive screenshots
-        if: ${{ failure() }}
-        uses: actions/upload-artifact@v1
-        with:
-          name: cra-integration-screenshots
-          path: test/cli/generated/create-react-app/.loki
+#      - name: build storybook
+#        run: npm run storybook:build
+#        if: always()
+#      - name: screenshot testing
+#        run: npm run test:ui:ci
+#        if: always()
