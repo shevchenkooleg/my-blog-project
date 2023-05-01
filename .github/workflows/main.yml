@@ -35,4 +35,9 @@ jobs:
         if: always()
       - name: screenshot testing
         run: npm run test:ui:ci
-        if: always()
+      - name: Archive screenshots
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v1
+        with:
+          name: cra-integration-screenshots
+          path: test/cli/generated/create-react-app/.loki
