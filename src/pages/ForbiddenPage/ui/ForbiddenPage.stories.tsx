@@ -2,20 +2,20 @@ import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
 import { Theme } from "app/providers/ThemeProvider";
 import { StoreDecorator } from "shared/config/storybook/Decorators/StoreDecorator";
-import MainPage from './MainPage';
+import ForbidenPage from './ForbiddenPage';
 
 
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
     title: 'pages/ForbiddenPage',
-    component: MainPage,
+    component: ForbidenPage,
     argTypes: {
         backgroundColor: { control: 'color' }
     }
-} as ComponentMeta<typeof MainPage>;
+} as ComponentMeta<typeof ForbidenPage>;
 
-const Template: ComponentStory<typeof MainPage> = (args) => <MainPage/>;
+const Template: ComponentStory<typeof ForbidenPage> = (args) => <ForbidenPage/>;
 
 export const Light = Template.bind({});
 Light.args = {};

@@ -46,7 +46,6 @@ export const fetchArticlesList =
                         type: type === ArticleType.ALL ? undefined : type
                     }
                 })
-                console.log(response)
                 if (!response.data) {
                     throw new Error()
                 }

@@ -32,8 +32,6 @@ describe('addCommentForArticle.test', () => {
 
         thunk.api.post.mockReturnValue(Promise.resolve({ data: commentData }))
         const result = await thunk.callThunk(undefined);
-
-        console.log(result)
         expect(thunk.api.post).toHaveBeenCalled()
         expect(result.meta.requestStatus).toBe('fulfilled')
         expect(result.payload).toEqual(commentData)

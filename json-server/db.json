@@ -11007,15 +11007,22 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://i.imgur.com/qw7CV6k.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
+      "avatar": "https://banner2.cleanpng.com/20180606/wtw/kisspng-back-office-computer-icons-operations-management-f-manager-icon-5b17d295bec816.6825300615282878937815.jpg"
     }
   ],
   "profile": [

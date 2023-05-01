@@ -14,7 +14,6 @@ export const fetchArticleById = createAsyncThunk<Article, string, ThunkConfig<st
                     _expand: 'user'
                 }
             })
-            console.log(response)
             if (!response.data) {
                 throw new Error()
             }

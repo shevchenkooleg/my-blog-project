@@ -13,7 +13,6 @@ export const PageError: FC<ErrorPageProps> = (props) => {
     const { className } = props
     const { t } = useTranslation()
     const { theme } = useTheme()
-    console.log(theme)
 
     const reloadPage = () => {
         location.reload()

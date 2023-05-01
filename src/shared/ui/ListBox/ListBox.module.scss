@@ -15,7 +15,7 @@
     overflow: auto;
     background-color: var(--listbox-bg);
     position: absolute;
-    z-index: 100;
+    z-index: var(--list-box-z-index);
     border-radius: 12px;
     box-shadow: 4px 4px 8px var(--listbox-bg);
 }

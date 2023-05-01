@@ -19,7 +19,6 @@ export const fetchCommentsByArticleId = createAsyncThunk<Comment[], string | und
                     _expand: 'user'
                 }
             })
-            console.log(response)
             if (!response.data) {
                 throw new Error()
             }

@@ -28,7 +28,6 @@ export const addCommentForArticle = createAsyncThunk<Comment, undefined, ThunkCo
                 articleId: article.id,
                 userId: userData.id
             })
-            console.log(response)
             if (!response.data) {
                 throw new Error()
             }

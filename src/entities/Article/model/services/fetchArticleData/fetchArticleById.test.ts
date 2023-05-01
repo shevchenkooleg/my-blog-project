@@ -117,8 +117,6 @@ describe('fetchArticleById.test', () => {
 
         thunk.api.get.mockReturnValue(Promise.resolve({ data: articleData }))
         const result = await thunk.callThunk('');
-
-        console.log(result)
         expect(thunk.api.get).toHaveBeenCalled()
         expect(result.meta.requestStatus).toBe('fulfilled')
     })
@@ -127,7 +125,6 @@ describe('fetchArticleById.test', () => {
         const thunk = new TestAsyncThunk(fetchArticleById)
         thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }))
         const result = await thunk.callThunk('')
-        console.log(result)
         expect(result.meta.requestStatus).toBe('rejected')
     })
 })

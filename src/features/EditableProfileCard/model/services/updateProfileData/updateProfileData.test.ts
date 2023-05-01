@@ -28,8 +28,6 @@ describe('updateProfileData.test', () => {
 
         thunk.api.put.mockReturnValue(Promise.resolve({ data: formData }))
         const result = await thunk.callThunk('1');
-
-        console.log(result)
         expect(thunk.api.put).toHaveBeenCalled()
         expect(result.meta.requestStatus).toBe('fulfilled')
         expect(result.payload).toEqual(formData)
@@ -43,7 +41,6 @@ describe('updateProfileData.test', () => {
         })
         thunk.api.put.mockReturnValue(Promise.resolve({ status: 403 }))
         const result = await thunk.callThunk('1')
-        console.log(result)
         expect(result.meta.requestStatus).toBe('rejected')
         expect(result.payload).toEqual([ValidateProfileError.SERVER_ERROR])
     })

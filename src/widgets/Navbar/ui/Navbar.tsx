@@ -4,7 +4,7 @@ import { memo, useCallback, useState } from "react";
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from "react-i18next";
 import { LoginModal } from "features/AuthByUsername";
-import { getUserAuthData, userActions } from "entities/User";
+import { getUserAuthData, isUserAdmin, isUserManager, userActions } from "entities/User";
 import { useDispatch, useSelector } from 'react-redux';
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
@@ -17,10 +17,13 @@ interface NavbarProps {
 }
 
 export const Navbar = memo(({ className }: NavbarProps) => {
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
     const [isAuthModal, setIsAuthModal] = useState(false)
     const authData = useSelector(getUserAuthData)
     const dispatch = useDispatch()
+    const isAdmin = useSelector(isUserAdmin)
+    const isManager = useSelector(isUserManager)
+
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false)
     }, [])
@@ -30,13 +33,11 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     }, [])
 
     const logOut = useCallback(() => {
-        console.log('logout')
         dispatch(userActions.logout())
         setIsAuthModal(false)
     }, [dispatch])
 
-    console.log(i18n.language)
-
+    const isAdminPanelAvailable = isAdmin || isManager
 
     if (authData?.id) {
         return (
@@ -48,6 +49,12 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 <Dropdown
                     className={cls.dropdown}
                     items={[
+                        ...(isAdminPanelAvailable
+                            ? [{
+                                content: t('Панель администратора'),
+                                href: RoutePath.admin_panel
+                            }]
+                            : []),
                         {
                             content: t('Профиль пользователя'),
                             href: RoutePath.profile + String(authData.id)
