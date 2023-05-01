@@ -16,7 +16,7 @@ import { DynamicModuleLoader, type ReducerList } from "shared/components/Dynamic
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 
 interface ArticleDetailsCommentsProps {
-    id: string
+    id?: string
 }
 
 export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) => {

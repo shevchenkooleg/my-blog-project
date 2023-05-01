@@ -3,10 +3,10 @@ import { Suspense } from 'react';
 
 
 
-export const TranslationDecorator = (story: () => Story) => {
+export const TranslationDecorator = (StoryComponent: Story) => {
     return (
         <Suspense fallback=''>
-            {story()}
+            <StoryComponent />
         </Suspense>
     )
 };

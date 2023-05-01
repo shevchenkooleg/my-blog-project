@@ -11000,6 +11000,12 @@
       "articleId": "3",
       "userId": "2",
       "id": "xcTZNeA"
+    },
+    {
+      "text": "new comment",
+      "articleId": "1",
+      "userId": "3",
+      "id": "w9d0mWf"
     }
   ],
   "users": [
@@ -11007,21 +11013,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://i.imgur.com/qw7CV6k.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://banner2.cleanpng.com/20180606/wtw/kisspng-back-office-computer-icons-operations-management-f-manager-icon-5b17d295bec816.6825300615282878937815.jpg"
     }
   ],
@@ -11047,6 +11059,17 @@
       "city": "Minsk",
       "username": "user",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    },
+    {
+      "id": "3",
+      "firstName": "Ivan",
+      "lastName": "Ivanov",
+      "age": 42,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Sochi",
+      "username": "manager",
+      "avatar": "https://banner2.cleanpng.com/20180606/wtw/kisspng-back-office-computer-icons-operations-management-f-manager-icon-5b17d295bec816.6825300615282878937815.jpg"
     }
   ]
 }
