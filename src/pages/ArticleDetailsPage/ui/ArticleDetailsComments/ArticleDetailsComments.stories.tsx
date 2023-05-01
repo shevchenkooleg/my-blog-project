@@ -15,7 +15,7 @@ export default {
     decorators: [
         StoreDecorator({
             articleDetailsComments: {
-                ids: ['1'],
+                ids: ['1', '2', '3'],
                 entities: {
                     1: {
                         id: "1",
@@ -25,25 +25,25 @@ export default {
                             username: "admin",
                             avatar: "https://i.imgur.com/qw7CV6k.jpg"
                         }
+                    },
+                    2: {
+                        id: "1",
+                        text: "some comment 2",
+                        user: {
+                            id: 1,
+                            username: "admin",
+                            avatar: "https://i.imgur.com/qw7CV6k.jpg"
+                        }
+                    },
+                    3: {
+                        id: "1",
+                        text: "some comment 3",
+                        user: {
+                            id: 1,
+                            username: "admin",
+                            avatar: "https://i.imgur.com/qw7CV6k.jpg"
+                        }
                     }
-                //     2: {
-                //         id: "1",
-                //         text: "some comment 2",
-                //         user: {
-                //             id: 1,
-                //             username: "admin",
-                //             avatar: "https://i.imgur.com/qw7CV6k.jpg"
-                //         }
-                //     },
-                //     3: {
-                //         id: "1",
-                //         text: "some comment 3",
-                //         user: {
-                //             id: 1,
-                //             username: "admin",
-                //             avatar: "https://i.imgur.com/qw7CV6k.jpg"
-                //         }
-                //     }
                 },
                 isLoading: false,
                 error: ''

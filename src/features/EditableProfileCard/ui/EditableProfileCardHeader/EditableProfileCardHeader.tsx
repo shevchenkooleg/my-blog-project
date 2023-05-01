@@ -24,7 +24,7 @@ export const EditableProfileCardHeader = memo((props: EditableProfileCardHeaderP
     const dispatch = useAppDispatch()
     const authData = useSelector(getUserAuthData)
     const profileData = useSelector(getProfileData)
-    const canEdit = authData?.id === profileData?.id
+    const canEdit = String(authData?.id) === profileData?.id
     const onEdit = useCallback(() => {
         dispatch(profileActions.setReadOnly(false))
     }, [dispatch])
@@ -43,16 +43,28 @@ export const EditableProfileCardHeader = memo((props: EditableProfileCardHeaderP
                 <div>
                     {readOnly
                         ? (
-                            <Button theme={ButtonTheme.OUTLINE} onClick={onEdit}>
+                            <Button
+                                theme={ButtonTheme.OUTLINE}
+                                onClick={onEdit}
+                                data-testid={'EditableProfileCardHeader.EditBtn'}
+                            >
                                 {t('Редактировать')}
                             </Button>
                         )
                         : (
                             <HStack gap={'16'}>
-                                <Button theme={ButtonTheme.OUTLINE_RED} onClick={onCancelEdit}>
+                                <Button
+                                    theme={ButtonTheme.OUTLINE_RED}
+                                    onClick={onCancelEdit}
+                                    data-testid={'EditableProfileCardHeader.CancelBtn'}
+                                >
                                     {t('Отменить')}
                                 </Button>
-                                <Button theme={ButtonTheme.OUTLINE} onClick={onSave}>
+                                <Button
+                                    theme={ButtonTheme.OUTLINE}
+                                    onClick={onSave}
+                                    data-testid={'EditableProfileCardHeader.SaveBtn'}
+                                >
                                     {t('Сохранить')}
                                 </Button>
                             </HStack>

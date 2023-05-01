@@ -7,6 +7,7 @@ import { addCommentFormReducer } from "features/AddCommentForm/model/slice/addCo
 import { userReducer } from "entities/User";
 import { pageSliceReducer } from "widgets/Page";
 import { profileReducer } from "features/EditableProfileCard/model/slice/profileSlice";
+import { articleDetailsCommentReducer } from "features/ArticleCommentList";
 
 const defaultAsyncReducers: ReducerList = {
     loginForm: loginReducer,
@@ -14,7 +15,8 @@ const defaultAsyncReducers: ReducerList = {
     user: userReducer,
     page: pageSliceReducer,
     articleDetails: articleDetailsReducer,
-    addCommentForm: addCommentFormReducer
+    addCommentForm: addCommentFormReducer,
+    articleDetailsComments: articleDetailsCommentReducer
 }
 
 export const StoreDecorator = (

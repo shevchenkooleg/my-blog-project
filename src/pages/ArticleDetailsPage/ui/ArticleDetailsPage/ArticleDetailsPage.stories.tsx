@@ -118,7 +118,14 @@ export default {
     component: ArticlesDetailsPage,
     argTypes: {
         backgroundColor: { control: 'color' }
-    }
+    },
+    decorators: [
+        StoreDecorator({
+            articleDetails: {
+                data: article
+            }
+        })
+    ]
 } as ComponentMeta<typeof ArticlesDetailsPage>;
 
 const Template: ComponentStory<typeof ArticlesDetailsPage> = (args) => <ArticlesDetailsPage {...args}/>;
@@ -126,8 +133,3 @@ const Template: ComponentStory<typeof ArticlesDetailsPage> = (args) => <Articles
 export const Primary = Template.bind({});
 Primary.args = {
 };
-Primary.decorators = [StoreDecorator({
-    articleDetails: {
-        data: article
-    }
-})]

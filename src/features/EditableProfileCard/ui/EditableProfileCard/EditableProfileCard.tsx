@@ -17,13 +17,11 @@ import { ProfileCard } from 'entities/Profile';
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
 import { DynamicModuleLoader, type ReducerList } from "shared/components/DynamicModuleLoader";
 import { VStack } from "shared/ui/Stack";
-import {
-    EditableProfileCardHeader
-} from "../EditableProfileCardHeader/EditableProfileCardHeader";
+import { EditableProfileCardHeader } from "../EditableProfileCardHeader/EditableProfileCardHeader";
 
 interface EditableProfileCardProps {
     className?: string
-    id?: string
+    id: string
 }
 
 export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
@@ -107,10 +105,16 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={true}>
-            <VStack max>
+            <VStack max gap={'8'}>
                 <EditableProfileCardHeader/>
                 {validateErrors?.length && validateErrors.map((err, i) =>
-                    <Text theme={TextTheme.ERROR} text={validateErrorsTranslates[err]} key={i}/>)}
+                    <Text
+                        theme={TextTheme.ERROR}
+                        text={validateErrorsTranslates[err]}
+                        key={i}
+                        data-testid={'EditableProfileCard.Error'}
+                    />
+                )}
                 <ProfileCard
                     data={formData}
                     isLoading={isLoading}
