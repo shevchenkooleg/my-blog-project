@@ -3,7 +3,7 @@ import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorato
 import { Theme } from "app/providers/ThemeProvider";
 import { ArticleInfiniteList } from './ArticleInfiniteList';
 import { StoreDecorator } from "shared/config/storybook/Decorators/StoreDecorator";
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
+import { ArticleBlockType, ArticleType } from 'entities/Article';
 
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions

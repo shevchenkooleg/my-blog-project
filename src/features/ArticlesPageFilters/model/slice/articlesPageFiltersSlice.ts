@@ -1,9 +1,9 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { type ArticlesPageFiltersSchema } from "../types/articlesPageFiltersSchema";
-import { ArticleSortField, ArticleType, ArticleView } from "entities/Article/model/types/article";
 import { type SortOrder } from "shared/types";
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from "shared/const/localstorage";
 import { articlesPageActions } from 'pages/ArticlesPage/model/slice/articlesPageSlice';
+import { ArticleSortField, ArticleType, ArticleView } from 'entities/Article';
 
 const initialState: ArticlesPageFiltersSchema = {
     isLoading: false,

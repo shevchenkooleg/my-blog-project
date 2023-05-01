@@ -1,6 +1,5 @@
 import { type StateSchema } from "app/providers/StoreProvider";
-import { ArticleView } from "entities/Article";
-import { ArticleSortField, ArticleType } from "entities/Article/model/types/article";
+import { ArticleSortField, ArticleType, ArticleView } from "entities/Article";
 
 export const getArticlesPageFiltersPageView = (state: StateSchema) => (
     state.articlesPageFilters?.view || ArticleView.SMALL

@@ -5,10 +5,10 @@ import { memo, useMemo } from "react";
 import { type TabItem, Tabs } from "shared/ui/Tabs/Tabs";
 import { useSelector } from "react-redux";
 import { getArticlesPageFiltersType } from "../../model/selectors/articlesPageFiltersSelectors";
-import { ArticleType } from "entities/Article/model/types/article";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
 import { articlesPageActions } from "pages/ArticlesPage/model/slice/articlesPageSlice";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { ArticleType } from "entities/Article";
 
 interface ArticleTypeTabsProps {
     className?: string

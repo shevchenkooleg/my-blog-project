@@ -10,4 +10,5 @@ export { getArticleDetailsError } from './model/selectors/getArticleDetailsError
 export { getCanEditArticle } from './model/selectors/getCanEditArticle/getCanEditArticle'
 
 export { ArticleList } from './ui/ArticleList/ArticleList'
-export { ArticleView } from './model/types/article'
+
+export { ArticleView, ArticleSortField, ArticleBlockType, ArticleType } from './model/consts/consts'

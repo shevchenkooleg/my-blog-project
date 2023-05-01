@@ -1,28 +1,5 @@
 import { type User } from "entities/User";
-
-export enum ArticleBlockType {
-    IMAGE = 'IMAGE',
-    TEXT = 'TEXT',
-    CODE = 'CODE'
-}
-
-export enum ArticleType {
-    ALL = 'ALL',
-    IT = 'IT',
-    SCIENCE = 'SCIENCE',
-    ECONOMIC = 'ECONOMIC'
-}
-
-export enum ArticleView {
-    BIG = 'BIG',
-    SMALL = 'SMALL'
-}
-
-export enum ArticleSortField {
-    VIEWS = 'views',
-    CREATED = 'created',
-    TITLE = 'title'
-}
+import { type ArticleBlockType, type ArticleType } from "../consts/consts";
 
 
 export interface ArticleBlockBase {

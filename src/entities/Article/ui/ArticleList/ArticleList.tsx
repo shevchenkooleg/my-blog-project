@@ -2,11 +2,11 @@ import cls from "./ArticleList.module.scss"
 import { classNames } from "shared/lib/classNames/classNames";
 import { type HTMLAttributeAnchorTarget, memo } from "react";
 import type { Article } from "../../model/types/article";
-import { ArticleView } from "../../model/types/article";
 import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import { ArticleListItemSkeleton } from "../ArticleListItemSkeleton/ArticleListItemSkeleton";
 import { Text, TextSize } from "shared/ui/Text/Text";
 import { useTranslation } from "react-i18next";
+import { ArticleView } from "../../model/consts/consts";
 
 interface ArticleListProps {
     className?: string

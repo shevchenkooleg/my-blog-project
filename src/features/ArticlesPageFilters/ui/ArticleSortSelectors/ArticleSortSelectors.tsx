@@ -3,7 +3,6 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { memo, useCallback, useMemo } from "react";
 import { Select, type SelectOption } from "shared/ui/Select/Select";
-import { ArticleSortField } from "entities/Article/model/types/article";
 import { useSelector } from "react-redux";
 import {
     getArticlesPageFiltersOrder,
@@ -13,6 +12,7 @@ import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
 import { type SortOrder } from "shared/types";
 import { articlesPageActions } from "pages/ArticlesPage/model/slice/articlesPageSlice";
+import { ArticleSortField } from "entities/Article";
 
 interface ArticleSortSelectorsProps {
     className?: string
