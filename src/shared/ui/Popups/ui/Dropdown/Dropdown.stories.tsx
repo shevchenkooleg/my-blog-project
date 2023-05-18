@@ -2,7 +2,7 @@ import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
 import { Theme } from "app/providers/ThemeProvider";
 import { Dropdown } from './Dropdown';
-import { Button } from "../Button/Button";
+import { Button } from "../../../Button/Button";
 
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions

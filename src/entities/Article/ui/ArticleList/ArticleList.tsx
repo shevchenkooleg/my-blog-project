@@ -10,7 +10,7 @@ import { ArticleView } from "../../model/consts/consts";
 
 interface ArticleListProps {
     className?: string
-    articles: Article[]
+    articles: Article[] | undefined
     isLoading?: boolean
     view?: ArticleView
     target?: HTMLAttributeAnchorTarget
@@ -44,13 +44,13 @@ export const ArticleList = memo((props: ArticleListProps) => {
         />
     )
 
-    if (!isLoading && !articles.length) {
+    if (!isLoading && !articles?.length) {
         return <Text size={TextSize.L} className={cls.notFound} title={t('Статьи не найдены')}/>
     }
 
     return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-            {articles.length > 0
+            {articles && articles.length > 0
                 ? articles.map(renderArticle)
                 : null
             }
