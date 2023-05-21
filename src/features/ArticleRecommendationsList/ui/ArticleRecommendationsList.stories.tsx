@@ -351,7 +351,7 @@ const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => <A
 export const Default = Template.bind({})
 Default.args = {}
 Default.decorators = [
-    StoreDecorator({})
+    StoreDecorator({ rtkApi: {} })
 ]
 Default.parameters = {
     mockData: [{

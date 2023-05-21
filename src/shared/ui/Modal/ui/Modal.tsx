@@ -3,6 +3,7 @@ import { classNames, type Mods } from "shared/lib/classNames/classNames";
 import React, { type FC, type MutableRefObject, type ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { Portal } from "../../Portal/Portal";
 import { useTheme } from "app/providers/ThemeProvider";
+import { Overlay } from "../../Overlay/Overlay";
 
 interface ModalProps {
     className?: string
@@ -59,19 +60,16 @@ export const Modal: FC<ModalProps> = (props) => {
         [cls.isClosing]: isClosing
     }
 
-    const onContentClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        e.stopPropagation()
-    }
-
 
     return (
         <Portal element={element}>
             <div className={classNames(cls.Modal, mods, [className, theme])}>
-                <div className={cls.overlay} onClick={closeHandler}>
-                    <div className={cls.content} onClick={onContentClick}>
-                        {children}
-                    </div>
+                {/* <div className={cls.overlay} onClick={closeHandler}> */}
+                <Overlay onClick={closeHandler}/>
+                <div className={cls.content}>
+                    {children}
                 </div>
+                {/* </div> */}
             </div>
         </Portal>
 

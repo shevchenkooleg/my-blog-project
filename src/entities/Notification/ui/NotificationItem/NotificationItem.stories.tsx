@@ -6,7 +6,7 @@ import { NotificationItem } from './NotificationItem';
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'widgets/NotificationItem',
+    title: 'entities/Notification/NotificationItem',
     component: NotificationItem,
     argTypes: {
         backgroundColor: { control: 'color' }
@@ -16,8 +16,30 @@ export default {
 const Template: ComponentStory<typeof NotificationItem> = (args) => <NotificationItem {...args}/>;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+    item: {
+        id: "1",
+        title: "Уведомление 1",
+        description: "Произошло какое-то событие"
+    }
+};
 
 export const Dark = Template.bind({});
-Dark.args = {};
+Dark.args = {
+    item: {
+        id: "1",
+        title: "Уведомление 1",
+        description: "Произошло какое-то событие"
+    }
+};
 Dark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const Olive = Template.bind({});
+Olive.args = {
+    item: {
+        id: "1",
+        title: "Уведомление 1",
+        description: "Произошло какое-то событие"
+    }
+};
+Olive.decorators = [ThemeDecorator(Theme.OLIVE)]
