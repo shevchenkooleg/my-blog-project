@@ -1,6 +1,6 @@
 import React, { Suspense, type ErrorInfo, type ReactNode } from "react";
-import { PageError } from "shared/ui/PageError";
-import { ThemeProvider } from "app/providers/ThemeProvider";
+import { PageError } from "@/shared/ui/PageError";
+import { ThemeProvider } from "@/app/providers/ThemeProvider";
 
 interface ErrorBoundaryProps {
     children: ReactNode

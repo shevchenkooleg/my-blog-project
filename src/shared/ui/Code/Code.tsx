@@ -1,5 +1,5 @@
 import cls from "./Code.module.scss"
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import { memo, useCallback } from "react";
 import { Button, ButtonTheme } from "../Button/Button";
 import CopyIcon from '../../assets/icons/Copy-icon.svg'

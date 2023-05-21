@@ -1,8 +1,8 @@
-import { Currency } from "entities/Currency";
-import { Country } from "entities/Country";
+import { Currency } from "@/entities/Currency";
+import { Country } from "@/entities/Country";
 import { getProfileForm } from "./getProfileForm";
-import { type StateSchema } from "app/providers/StoreProvider";
-import { type Profile } from "entities/Profile";
+import { type StateSchema } from "@/app/providers/StoreProvider";
+import { type Profile } from "@/entities/Profile";
 
 describe('getProfileForm.test', () => {
     test('should return form field', () => {

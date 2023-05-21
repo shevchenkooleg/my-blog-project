@@ -1,6 +1,6 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
-import { Theme } from "app/providers/ThemeProvider";
+import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
+import { Theme } from "@/app/providers/ThemeProvider";
 import { ArticleList } from './ArticleList';
 import { type Article } from "../../model/types/article";
 import { ArticleView } from "../../model/consts/consts";

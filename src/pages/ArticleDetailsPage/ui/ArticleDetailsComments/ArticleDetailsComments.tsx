@@ -1,19 +1,19 @@
 import { memo, useCallback } from "react";
-import { VStack } from "shared/ui/Stack";
-import { Text } from "shared/ui/Text/Text";
-import { AddCommentForm } from "features/AddCommentForm";
-import { CommentList } from "entities/Comment";
+import { VStack } from "@/shared/ui/Stack";
+import { Text } from "@/shared/ui/Text/Text";
+import { AddCommentForm } from "@/features/AddCommentForm";
+import { CommentList } from "@/entities/Comment";
 import {
     addCommentForArticle,
     articleDetailsCommentReducer, fetchCommentsByArticleId,
     getArticleComments,
     getArticleCommentsIsLoading
-} from "features/ArticleCommentList";
+} from "@/features/ArticleCommentList";
 import { useSelector } from "react-redux";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useTranslation } from "react-i18next";
-import { DynamicModuleLoader, type ReducerList } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
+import { DynamicModuleLoader, type ReducerList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
+import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
 
 interface ArticleDetailsCommentsProps {
     id?: string

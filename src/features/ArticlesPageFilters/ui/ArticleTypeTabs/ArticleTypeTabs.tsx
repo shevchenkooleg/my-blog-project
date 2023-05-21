@@ -1,14 +1,14 @@
 import cls from "./ArticleTypeTabs.module.scss"
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { memo, useMemo } from "react";
-import { type TabItem, Tabs } from "shared/ui/Tabs/Tabs";
+import { type TabItem, Tabs } from "@/shared/ui/Tabs/Tabs";
 import { useSelector } from "react-redux";
 import { getArticlesPageFiltersType } from "../../model/selectors/articlesPageFiltersSelectors";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
-import { articlesPageActions } from "pages/ArticlesPage/model/slice/articlesPageSlice";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { ArticleType } from "entities/Article";
+import { articlesPageActions } from "@/pages/ArticlesPage/model/slice/articlesPageSlice";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { ArticleType } from "@/entities/Article";
 
 interface ArticleTypeTabsProps {
     className?: string

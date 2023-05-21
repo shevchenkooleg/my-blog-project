@@ -1,12 +1,12 @@
 import cls from "./Dropdown.module.scss"
 import popupCls from './../../styles/popup.module.scss'
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import { Menu } from '@headlessui/react'
 import { Fragment, type ReactNode } from "react";
 import { Button, ButtonTheme } from "../../../Button/Button";
 import { AppLink } from "../../../AppLink/AppLink";
 import { mapDirectionClass } from "../../styles/styleClassMapper";
-import { type DropdownDirection } from "shared/types/ui";
+import { type DropdownDirection } from "@/shared/types/ui";
 
 
 export interface DropdownItem {

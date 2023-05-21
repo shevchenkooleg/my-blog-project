@@ -1,8 +1,8 @@
-import { TestAsyncThunk } from "shared/lib/test/TestAsyncThunk/TestAsyncThunk";
+import { TestAsyncThunk } from "@/shared/lib/test/TestAsyncThunk/TestAsyncThunk";
 import { fetchProfileData } from "./fetchProfileData";
-import { Currency } from "entities/Currency";
-import { Country } from "entities/Country";
-import { type Profile } from "entities/Profile";
+import { Currency } from "@/entities/Currency";
+import { Country } from "@/entities/Country";
+import { type Profile } from "@/entities/Profile";
 
 const responseValue: Profile = {
     firstName: "Олег",

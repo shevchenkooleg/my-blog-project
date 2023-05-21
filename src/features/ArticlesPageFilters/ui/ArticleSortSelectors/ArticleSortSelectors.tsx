@@ -1,18 +1,18 @@
 import cls from "./ArticleSortSelectors.module.scss"
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { memo, useCallback, useMemo } from "react";
-import { Select, type SelectOption } from "shared/ui/Select/Select";
+import { Select, type SelectOption } from "@/shared/ui/Select/Select";
 import { useSelector } from "react-redux";
 import {
     getArticlesPageFiltersOrder,
     getArticlesPageFiltersSort
 } from "../../model/selectors/articlesPageFiltersSelectors";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
-import { type SortOrder } from "shared/types";
-import { articlesPageActions } from "pages/ArticlesPage/model/slice/articlesPageSlice";
-import { ArticleSortField } from "entities/Article";
+import { type SortOrder } from "@/shared/types";
+import { articlesPageActions } from "@/pages/ArticlesPage/model/slice/articlesPageSlice";
+import { ArticleSortField } from "@/entities/Article";
 
 interface ArticleSortSelectorsProps {
     className?: string

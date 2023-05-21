@@ -1,9 +1,9 @@
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { memo } from "react";
 import { Text, TextSize } from '../../../shared/ui/Text/Text'
-import { ArticleList } from "entities/Article";
-import { ArticleListItemSkeleton } from "entities/Article/ui/ArticleListItemSkeleton/ArticleListItemSkeleton";
+import { ArticleList } from "@/entities/Article";
+import { ArticleListItemSkeleton } from "@/entities/Article/ui/ArticleListItemSkeleton/ArticleListItemSkeleton";
 import { useArticleRecommendationsList } from "../api/articleRecommendationsApi";
 
 interface ArticlePageRecommendationProps {

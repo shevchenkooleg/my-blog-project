@@ -1,7 +1,7 @@
 import React from 'react';
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from "shared/config/storybook/Decorators/ThemeDecorator";
-import { Theme } from "app/providers/ThemeProvider";
+import { ThemeDecorator } from "@/shared/config/storybook/Decorators/ThemeDecorator";
+import { Theme } from "@/app/providers/ThemeProvider";
 import { Input } from './Input';
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions

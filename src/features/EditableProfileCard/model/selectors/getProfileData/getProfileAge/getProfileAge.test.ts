@@ -1,5 +1,5 @@
 import { getProfileAge } from "./getProfileAge";
-import { type StateSchema } from "app/providers/StoreProvider";
+import { type StateSchema } from "@/app/providers/StoreProvider";
 
 describe('getProfileAge.test', () => {
     test('should return age', () => {

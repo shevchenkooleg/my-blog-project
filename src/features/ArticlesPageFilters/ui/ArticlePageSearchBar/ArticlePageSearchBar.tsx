@@ -1,13 +1,13 @@
 import cls from "./ArticlePageSearchBar.module.scss"
 import { useTranslation } from "react-i18next";
 import { memo, useCallback } from "react";
-import { Input } from "shared/ui/Input/Input";
-import { Card } from "shared/ui/Card/Card";
+import { Input } from "@/shared/ui/Input/Input";
+import { Card } from "@/shared/ui/Card/Card";
 import { useSelector } from "react-redux";
 import { getArticlesPageFiltersSearch } from "../../model/selectors/articlesPageFiltersSelectors";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { articlesPageActions } from "pages/ArticlesPage/model/slice/articlesPageSlice";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { articlesPageActions } from "@/pages/ArticlesPage/model/slice/articlesPageSlice";
 
 interface ArticlePageSearchBarProps {
     className?: string

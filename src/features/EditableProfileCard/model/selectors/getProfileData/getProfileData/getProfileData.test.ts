@@ -1,8 +1,8 @@
-import { type StateSchema } from "app/providers/StoreProvider";
-import { Currency } from "entities/Currency";
-import { Country } from "entities/Country";
+import { type StateSchema } from "@/app/providers/StoreProvider";
+import { Currency } from "@/entities/Currency";
+import { Country } from "@/entities/Country";
 import { getProfileData } from "./getProfileData";
-import { type Profile } from "entities/Profile";
+import { type Profile } from "@/entities/Profile";
 
 describe('getProfileData.test', () => {
     test('should return whole profile data', () => {

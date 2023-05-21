@@ -1,4 +1,4 @@
-import { type StateSchema } from "app/providers/StoreProvider";
+import { type StateSchema } from "@/app/providers/StoreProvider";
 import { getProfileLastName } from "./getProfileLastName";
 
 describe('getProfileLastName.test', () => {

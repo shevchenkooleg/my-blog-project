@@ -1,6 +1,6 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
-import { Theme } from "app/providers/ThemeProvider";
+import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
+import { Theme } from "@/app/providers/ThemeProvider";
 import { Tabs } from './Tabs';
 import { action } from "@storybook/addon-actions";
 

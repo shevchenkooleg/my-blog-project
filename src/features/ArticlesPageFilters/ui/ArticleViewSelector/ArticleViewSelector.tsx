@@ -1,15 +1,15 @@
 import cls from "./ArticleViewSelector.module.scss"
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import { memo } from "react";
-import { ArticleView } from "entities/Article";
-import ListIcon from 'shared/assets/icons/List-icon.svg'
-import TiledIcon from 'shared/assets/icons/Tiled-icon.svg'
-import { Button, ButtonTheme } from "shared/ui/Button/Button";
-import { Icon } from "shared/ui/Icon/Icon";
+import { ArticleView } from "@/entities/Article";
+import ListIcon from '@/shared/assets/icons/List-icon.svg'
+import TiledIcon from '@/shared/assets/icons/Tiled-icon.svg'
+import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
+import { Icon } from "@/shared/ui/Icon/Icon";
 import { useSelector } from "react-redux";
 import { getArticlesPageFiltersPageView } from "../../model/selectors/articlesPageFiltersSelectors";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 
 interface ArticleViewSelectorProps {
     className?: string

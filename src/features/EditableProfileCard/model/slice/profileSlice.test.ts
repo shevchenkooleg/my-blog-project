@@ -1,8 +1,8 @@
-import { Currency } from "entities/Currency";
-import { Country } from "entities/Country";
+import { Currency } from "@/entities/Currency";
+import { Country } from "@/entities/Country";
 import { profileActions, profileReducer } from "./profileSlice";
 import { fetchProfileData } from "../services/fetchProfileData/fetchProfileData";
-import { type Profile } from "entities/Profile";
+import { type Profile } from "@/entities/Profile";
 import { type ProfileSchema } from "../types/EditableProfileCardSchema";
 
 const profileData: Profile = {

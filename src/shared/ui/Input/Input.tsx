@@ -1,5 +1,5 @@
 import cls from "./Input.module.scss"
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import React, { memo, type FC, type InputHTMLAttributes } from 'react';
 
 type InputAttributes = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>

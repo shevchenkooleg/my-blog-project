@@ -1,9 +1,9 @@
 import { createEntityAdapter, createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { type ArticlesPageSchema } from "../types/articlesPageSchema";
-import { type StateSchema } from "app/providers/StoreProvider";
-import { type Article, ArticleView } from "entities/Article";
+import { type StateSchema } from "@/app/providers/StoreProvider";
+import { type Article, ArticleView } from "@/entities/Article";
 import { fetchArticlesList } from "../services/fetchArticlesList/fetchArticlesList";
-import { PAGE_SCROLL_VARIABLE_BIG_VIEW, PAGE_SCROLL_VARIABLE_SMALL_VIEW } from "shared/const/common";
+import { PAGE_SCROLL_VARIABLE_BIG_VIEW, PAGE_SCROLL_VARIABLE_SMALL_VIEW } from "@/shared/const/common";
 
 const articlesAdapter = createEntityAdapter<Article>({
     selectId: (article) => article.id

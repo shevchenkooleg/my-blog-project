@@ -1,13 +1,13 @@
 import { type Story } from "@storybook/react";
-import { type StateSchema, StoreProvider } from "app/providers/StoreProvider";
-import { loginReducer } from "features/AuthByUsername/model/slice/loginSlice";
-import { type ReducerList } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-import { articleDetailsReducer } from "entities/Article/model/slice/articleDetailsSlice";
-import { addCommentFormReducer } from "features/AddCommentForm/model/slice/addCommentFormSlice";
-import { userReducer } from "entities/User";
-import { pageSliceReducer } from "widgets/Page";
-import { profileReducer } from "features/EditableProfileCard/model/slice/profileSlice";
-import { articleDetailsCommentReducer } from "features/ArticleCommentList";
+import { type StateSchema, StoreProvider } from "@/app/providers/StoreProvider";
+import { loginReducer } from "@/features/AuthByUsername/model/slice/loginSlice";
+import { type ReducerList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
+import { articleDetailsReducer } from "@/entities/Article/model/slice/articleDetailsSlice";
+import { addCommentFormReducer } from "@/features/AddCommentForm/model/slice/addCommentFormSlice";
+import { userReducer } from "@/entities/User";
+import { pageSliceReducer } from "@/widgets/Page";
+import { profileReducer } from "@/features/EditableProfileCard/model/slice/profileSlice";
+import { articleDetailsCommentReducer } from "@/features/ArticleCommentList";
 
 const defaultAsyncReducers: ReducerList = {
     loginForm: loginReducer,

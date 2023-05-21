@@ -1,8 +1,8 @@
-import { TestAsyncThunk } from "shared/lib/test/TestAsyncThunk/TestAsyncThunk";
-import { Currency } from "entities/Currency";
-import { Country } from "entities/Country";
+import { TestAsyncThunk } from "@/shared/lib/test/TestAsyncThunk/TestAsyncThunk";
+import { Currency } from "@/entities/Currency";
+import { Country } from "@/entities/Country";
 import { updateProfileData } from "./updateProfileData";
-import { type Profile } from "entities/Profile";
+import { type Profile } from "@/entities/Profile";
 import { ValidateProfileError } from "../../types/EditableProfileCardSchema";
 
 const formData: Profile = {

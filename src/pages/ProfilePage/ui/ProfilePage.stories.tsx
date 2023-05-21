@@ -1,11 +1,11 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
-import { Theme } from "app/providers/ThemeProvider";
+import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
+import { Theme } from "@/app/providers/ThemeProvider";
 import ProfilePage from './ProfilePage';
-import { StoreDecorator } from "shared/config/storybook/Decorators/StoreDecorator";
-import { type Profile } from "entities/Profile";
-import { Country } from "entities/Country";
-import { Currency } from "entities/Currency";
+import { StoreDecorator } from "@/shared/config/storybook/Decorators/StoreDecorator";
+import { type Profile } from "@/entities/Profile";
+import { Country } from "@/entities/Country";
+import { Currency } from "@/entities/Currency";
 
 const profile: Profile = {
     username: 'admin',

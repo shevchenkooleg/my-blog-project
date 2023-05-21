@@ -1,14 +1,14 @@
 import cls from "./ArticlePageFilters.module.scss"
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import { memo, useCallback } from "react";
-import { DynamicModuleLoader, type ReducerList } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
+import { DynamicModuleLoader, type ReducerList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { articlesPageFiltersReducer } from "../../model/slice/articlesPageFiltersSlice";
 import { ArticleSortSelectors } from "../ArticleSortSelectors/ArticleSortSelectors";
 import { ArticlePageSearchBar } from "../ArticlePageSearchBar/ArticlePageSearchBar";
 import { ArticleViewSelector } from "../ArticleViewSelector/ArticleViewSelector";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { fetchArticlesList } from "pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList";
-import { useDebounce } from "shared/lib/hooks/useDebounce/useDebounce";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { fetchArticlesList } from "@/pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList";
+import { useDebounce } from "@/shared/lib/hooks/useDebounce/useDebounce";
 import { ArticleTypeTabs } from "../ArticleTypeTabs/ArticleTypeTabs";
 
 interface ArticlesSortFormProps {

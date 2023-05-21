@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
-import { type ThunkConfig } from "app/providers/StoreProvider/config/StateSchema";
+import { type ThunkConfig } from "@/app/providers/StoreProvider/config/StateSchema";
 import {
     getArticlesPageHasMore,
     getArticlesPageIsLoading,
@@ -19,6 +19,7 @@ export const fetchNextArticlePage = createAsyncThunk<void, undefined, ThunkConfi
         const page = getArticlesPagePageNum(getState())
 
         if (hasMore && !isLoading) {
+            // eslint-disable-next-line
             dispatch(articlesPageActions.setPage(page + 1))
             dispatch(fetchArticlesList({}))
         }

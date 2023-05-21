@@ -1,9 +1,9 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
-import { Theme } from "app/providers/ThemeProvider";
+import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
+import { Theme } from "@/app/providers/ThemeProvider";
 import { ArticleInfiniteList } from './ArticleInfiniteList';
-import { StoreDecorator } from "shared/config/storybook/Decorators/StoreDecorator";
-import { ArticleBlockType, ArticleType } from 'entities/Article';
+import { StoreDecorator } from "@/shared/config/storybook/Decorators/StoreDecorator";
+import { ArticleBlockType, ArticleType } from '@/entities/Article';
 
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions

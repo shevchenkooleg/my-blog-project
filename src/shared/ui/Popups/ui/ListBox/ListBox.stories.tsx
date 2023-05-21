@@ -1,6 +1,6 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import { Theme } from 'app/providers/ThemeProvider';
-import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
 import { ListBox } from './ListBox';
 
 

@@ -1,9 +1,9 @@
 import cls from "./PageError.module.scss"
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import React, { type FC } from 'react';
 import { useTranslation } from "react-i18next";
 import { Button } from "../../Button/Button";
-import { useTheme } from "app/providers/ThemeProvider";
+import { useTheme } from "@/app/providers/ThemeProvider";
 
 interface ErrorPageProps {
     className?: string

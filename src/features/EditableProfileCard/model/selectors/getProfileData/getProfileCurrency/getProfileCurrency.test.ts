@@ -1,5 +1,5 @@
-import { type StateSchema } from "app/providers/StoreProvider";
-import { Currency } from "entities/Currency";
+import { type StateSchema } from "@/app/providers/StoreProvider";
+import { Currency } from "@/entities/Currency";
 import { getProfileCurrency } from "./getProfileCurrency";
 
 describe('getProfileCurrency.test', () => {

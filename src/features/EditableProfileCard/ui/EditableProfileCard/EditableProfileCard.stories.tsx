@@ -2,9 +2,9 @@ import React from 'react';
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 
 import { EditableProfileCard } from './EditableProfileCard';
-import { StoreDecorator } from "shared/config/storybook/Decorators/StoreDecorator";
-import { Currency } from "entities/Currency";
-import { Country } from "entities/Country";
+import { StoreDecorator } from "@/shared/config/storybook/Decorators/StoreDecorator";
+import { Currency } from "@/entities/Currency";
+import { Country } from "@/entities/Country";
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
