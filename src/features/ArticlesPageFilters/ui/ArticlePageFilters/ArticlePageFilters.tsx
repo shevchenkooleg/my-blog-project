@@ -1,7 +1,7 @@
 import cls from "./ArticlePageFilters.module.scss"
 import { classNames } from "shared/lib/classNames/classNames";
 import { memo, useCallback } from "react";
-import { DynamicModuleLoader, type ReducerList } from "shared/components/DynamicModuleLoader";
+import { DynamicModuleLoader, type ReducerList } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { articlesPageFiltersReducer } from "../../model/slice/articlesPageFiltersSlice";
 import { ArticleSortSelectors } from "../ArticleSortSelectors/ArticleSortSelectors";
 import { ArticlePageSearchBar } from "../ArticlePageSearchBar/ArticlePageSearchBar";

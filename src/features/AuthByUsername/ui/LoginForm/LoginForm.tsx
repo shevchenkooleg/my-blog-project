@@ -12,7 +12,7 @@ import { getLoginUsername } from "../../model/selectors/getLoginUsername/getLogi
 import { getLoginIsLoading } from "../../model/selectors/getLoginIsLoading/getLoginIsLoading";
 import { getLoginPassword } from "../../model/selectors/getLoginPassword/getLoginPassword";
 import { getLoginError } from "../../model/selectors/getLoginError/getLoginError";
-import { DynamicModuleLoader, type ReducerList } from "shared/components/DynamicModuleLoader";
+import { DynamicModuleLoader, type ReducerList } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { type StateSchema } from "app/providers/StoreProvider";
 import { type LoginSchema } from "../../model/types/loginSchema";

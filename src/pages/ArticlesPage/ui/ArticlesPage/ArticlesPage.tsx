@@ -1,7 +1,7 @@
 import cls from "./ArticlesPage.module.scss"
 import { classNames } from "shared/lib/classNames/classNames";
 import { memo, useCallback } from "react";
-import { DynamicModuleLoader, type ReducerList } from "shared/components/DynamicModuleLoader";
+import { DynamicModuleLoader, type ReducerList } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { articlesPageReducer } from "../../model/slice/articlesPageSlice";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";

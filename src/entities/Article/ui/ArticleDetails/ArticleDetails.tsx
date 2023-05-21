@@ -1,7 +1,7 @@
 import cls from "./ArticleDetails.module.scss"
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
-import { DynamicModuleLoader, type ReducerList } from "shared/components/DynamicModuleLoader";
+import { DynamicModuleLoader, type ReducerList } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { articleDetailsReducer } from "../../model/slice/articleDetailsSlice";
 import { memo, useCallback } from "react";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
