@@ -9,6 +9,7 @@
 /build
 /storybook-static
 /reports
+/dist
 
 # misc
 .DS_Store
