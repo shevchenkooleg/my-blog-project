@@ -7,7 +7,7 @@ import { StoreDecorator } from "@/shared/config/storybook/Decorators/StoreDecora
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'features/EditableProfileCard/EditableProfileCardHeader',
+    title: 'features/editableProfileCard/EditableProfileCardHeader',
     component: EditableProfileCardHeader,
     argTypes: {
         backgroundColor: { control: 'color' }

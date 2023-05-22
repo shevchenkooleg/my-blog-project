@@ -337,7 +337,7 @@ const dataSample: Article[] = [
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'features/ArticleRecommendationsList',
+    title: 'features/articleRecommendationsList',
     component: ArticleRecommendationsList,
     argTypes: {
         backgroundColor: { control: 'color' }

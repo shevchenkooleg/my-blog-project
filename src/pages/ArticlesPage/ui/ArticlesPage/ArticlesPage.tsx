@@ -11,7 +11,7 @@ import { Page } from "@/widgets/Page/ui/Page";
 import { fetchNextArticlePage } from "../../model/services/fetchNextArticlePage/fetchNextArticlePage";
 import { useTranslation } from "react-i18next";
 import { initArticlesPage } from "../../model/services/initArticlesPage/initArticlesPage";
-import { ArticlePageFilters } from "@/features/ArticlesPageFilters";
+import { ArticlePageFilters } from "@/features/articlesPageFilters";
 import { useSearchParams } from "react-router-dom";
 import { ArticleInfiniteList } from "../ArticleInfiniteList/ArticleInfiniteList";
 

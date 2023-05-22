@@ -8,11 +8,11 @@ import {
     getArticlesPageFiltersPageView,
     getArticlesPageFiltersSearch,
     getArticlesPageFiltersSort
-} from "@/features/ArticlesPageFilters";
+} from "@/features/articlesPageFilters";
 import { addQueryParams } from "@/shared/lib/url/addQueryParams/addQueryParams";
 import {
     getArticlesPageFiltersType
-} from "@/features/ArticlesPageFilters/model/selectors/articlesPageFiltersSelectors";
+} from "@/features/articlesPageFilters/model/selectors/articlesPageFiltersSelectors";
 
 interface FetchArticlesListProps {
     replace?: boolean

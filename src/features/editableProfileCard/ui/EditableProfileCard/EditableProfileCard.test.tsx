@@ -46,16 +46,16 @@ beforeEach(() => {
 });
 
 
-describe('EditableProfileCard.test', () => {
+describe('editableProfileCard.test', () => {
     test('Edit mode activated by click on EditBtn', async () => {
-        // act(() => { componentRender(<EditableProfileCard id={'1'}/>, options) })
+        // act(() => { componentRender(<editableProfileCard id={'1'}/>, options) })
         expect(screen.getByTestId('EditableProfileCardHeader.EditBtn')).toBeInTheDocument()
         await act(async () => { await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditBtn')) })
         expect(screen.getByTestId('EditableProfileCardHeader.CancelBtn')).toBeInTheDocument()
     })
 
     test('CancelBtn click erase all changes in the form', async () => {
-        // act(() => { componentRender(<EditableProfileCard id={'1'}/>, options) })
+        // act(() => { componentRender(<editableProfileCard id={'1'}/>, options) })
         expect(screen.getByTestId('EditableProfileCardHeader.EditBtn')).toBeInTheDocument()
         await act(async () => { await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditBtn')) })
         expect(screen.getByTestId('ProfileCard.firstname')).toBeInTheDocument()
@@ -75,7 +75,7 @@ describe('EditableProfileCard.test', () => {
     })
 
     test('Validation error should be throw', async () => {
-        // act(() => { componentRender(<EditableProfileCard id={'1'}/>, options) })
+        // act(() => { componentRender(<editableProfileCard id={'1'}/>, options) })
         expect(screen.getByTestId('EditableProfileCardHeader.EditBtn')).toBeInTheDocument()
         await act(async () => { await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditBtn')) })
         expect(screen.getByTestId('ProfileCard.firstname')).toBeInTheDocument()
@@ -85,11 +85,11 @@ describe('EditableProfileCard.test', () => {
         await act(async () => { await userEvent.clear(screen.getByTestId('ProfileCard.firstname')) })
         await act(async () => { await userEvent.clear(screen.getByTestId('ProfileCard.lastname')) })
         await act(async () => { await userEvent.click(screen.getByTestId('EditableProfileCardHeader.SaveBtn')) })
-        expect(screen.getByTestId('EditableProfileCard.Error.Paragraph')).toBeInTheDocument()
+        expect(screen.getByTestId('editableProfileCard.Error.Paragraph')).toBeInTheDocument()
     })
 
     test('Should be "PUT" query executed', async () => {
-        // act(() => { componentRender(<EditableProfileCard id={'1'}/>, options) })
+        // act(() => { componentRender(<editableProfileCard id={'1'}/>, options) })
         const mockPutReq = jest.spyOn($api, 'put')
         expect(screen.getByTestId('EditableProfileCardHeader.EditBtn')).toBeInTheDocument()
         await act(async () => { await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditBtn')) })

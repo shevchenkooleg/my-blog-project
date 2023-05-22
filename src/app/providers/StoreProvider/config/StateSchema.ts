@@ -1,5 +1,5 @@
 import { type UserSchema } from "@/entities/User";
-import { type LoginSchema } from "@/features/AuthByUsername";
+import { type LoginSchema } from "@/features/authByUsername";
 import {
     type AnyAction,
     type CombinedState,
@@ -9,13 +9,13 @@ import {
 } from "@reduxjs/toolkit";
 import { type AxiosInstance } from "axios";
 import { type ArticleDetailsSchema } from "@/entities/Article";
-import { type ArticleDetailsCommentSchema } from "@/features/ArticleCommentList";
-import { type AddCommentFormSchema } from "@/features/AddCommentForm";
+import { type ArticleDetailsCommentSchema } from "@/features/articleCommentList";
+import { type AddCommentFormSchema } from "@/features/addCommentForm";
 import { type ArticlesPageSchema } from "@/pages/ArticlesPage";
 import { type PageSchema } from "@/widgets/Page";
-import { type ArticlesPageFiltersSchema } from "@/features/ArticlesPageFilters";
+import { type ArticlesPageFiltersSchema } from "@/features/articlesPageFilters";
 import { type rtkApi } from "@/shared/api/rtkApi";
-import { type ProfileSchema } from "@/features/EditableProfileCard";
+import { type ProfileSchema } from "@/features/editableProfileCard";
 
 
 export interface StateSchema {

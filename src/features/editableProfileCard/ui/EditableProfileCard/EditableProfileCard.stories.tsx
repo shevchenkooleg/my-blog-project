@@ -8,7 +8,7 @@ import { Country } from "@/entities/Country";
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'features/EditableProfileCard/EditableProfileCard',
+    title: 'features/editableProfileCard/editableProfileCard',
     component: EditableProfileCard,
     argTypes: {
         backgroundColor: { control: 'color' }

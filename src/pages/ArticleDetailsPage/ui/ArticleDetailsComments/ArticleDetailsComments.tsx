@@ -1,14 +1,14 @@
 import { memo, useCallback } from "react";
 import { VStack } from "@/shared/ui/Stack";
 import { Text } from "@/shared/ui/Text/Text";
-import { AddCommentForm } from "@/features/AddCommentForm";
+import { AddCommentForm } from "@/features/addCommentForm";
 import { CommentList } from "@/entities/Comment";
 import {
     addCommentForArticle,
     articleDetailsCommentReducer, fetchCommentsByArticleId,
     getArticleComments,
     getArticleCommentsIsLoading
-} from "@/features/ArticleCommentList";
+} from "@/features/articleCommentList";
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useTranslation } from "react-i18next";

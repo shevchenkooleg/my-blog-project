@@ -3,7 +3,7 @@ import { ArticleList } from "@/entities/Article";
 import { useSelector } from "react-redux";
 import { getArticles } from "../../model/slice/articlesPageSlice";
 import { getArticlesPageError, getArticlesPageIsLoading } from "../../model/selectors/artcilesPageSelectors";
-import { getArticlesPageFiltersPageView } from "@/features/ArticlesPageFilters";
+import { getArticlesPageFiltersPageView } from "@/features/articlesPageFilters";
 import { Text } from '@/shared/ui/Text/Text'
 import { useTranslation } from "react-i18next";
 

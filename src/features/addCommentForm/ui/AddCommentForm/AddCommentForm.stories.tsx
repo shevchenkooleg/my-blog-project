@@ -7,7 +7,7 @@ import { StoreDecorator } from "@/shared/config/storybook/Decorators/StoreDecora
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'features/AddCommentForm',
+    title: 'features/addCommentForm',
     component: AddCommentForm,
     argTypes: {
         backgroundColor: { control: 'color' }

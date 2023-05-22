@@ -2,7 +2,7 @@ import { classNames } from "@/shared/lib/classNames/classNames";
 import { type FC } from 'react';
 import { Page } from "@/widgets/Page/ui/Page";
 import { VStack } from "@/shared/ui/Stack";
-import { EditableProfileCard } from "@/features/EditableProfileCard";
+import { EditableProfileCard } from "@/features/editableProfileCard";
 import { useParams } from "react-router-dom";
 
 
