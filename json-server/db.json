@@ -11156,31 +11156,39 @@
       "userId": "1",
       "articleId": "7",
       "rate": 4,
-      "feedback": "weqwrqwf",
       "id": 6
     }
   ],
   "profile-ratings": [
     {
-      "id": 1,
-      "rate": 4,
-      "feedback": "Норм чувак",
-      "userId": "1",
-      "profileId": "1"
-    },
-    {
       "id": 2,
       "rate": 3,
-      "feedback": "Так-себе чувак",
       "userId": "1",
       "profileId": "2"
     },
     {
       "id": 3,
       "rate": 1,
-      "feedback": "Говно чувак",
       "userId": "1",
       "profileId": "3"
+    },
+    {
+      "profileId": "1",
+      "rate": 4,
+      "userId": "1",
+      "id": 4
+    },
+    {
+      "profileId": "1",
+      "rate": 2,
+      "userId": "2",
+      "id": 5
+    },
+    {
+      "profileId": "3",
+      "rate": 3,
+      "userId": "2",
+      "id": 6
     }
   ]
 }

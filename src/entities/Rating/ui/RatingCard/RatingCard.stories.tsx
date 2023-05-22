@@ -21,12 +21,8 @@ export default {
 const Template: ComponentStory<typeof RatingCard> = (args) => <RatingCard {...args}/>;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = { title: 'Заголовок рейтинга' };
 
-export const Dark = Template.bind({});
-Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
-
-export const Olive = Template.bind({});
-Olive.args = {};
-Olive.decorators = [ThemeDecorator(Theme.OLIVE)]
+export const RatedDark = Template.bind({});
+RatedDark.args = { rate: 3 };
+RatedDark.decorators = [ThemeDecorator(Theme.DARK)]
