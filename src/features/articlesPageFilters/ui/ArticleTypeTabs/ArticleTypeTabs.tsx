@@ -6,7 +6,7 @@ import { type TabItem, Tabs } from "@/shared/ui/Tabs/Tabs";
 import { useSelector } from "react-redux";
 import { getArticlesPageFiltersType } from "../../model/selectors/articlesPageFiltersSelectors";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
-import { articlesPageActions } from "@/pages/ArticlesPage/model/slice/articlesPageSlice";
+import { articlesPageActions } from "@/pages/ArticlesPage";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { ArticleType } from "@/entities/Article";
 

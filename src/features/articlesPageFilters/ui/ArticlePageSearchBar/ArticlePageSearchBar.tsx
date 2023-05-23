@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { getArticlesPageFiltersSearch } from "../../model/selectors/articlesPageFiltersSelectors";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { articlesPageActions } from "@/pages/ArticlesPage/model/slice/articlesPageSlice";
+import { articlesPageActions } from "@/pages/ArticlesPage";
 
 interface ArticlePageSearchBarProps {
     className?: string

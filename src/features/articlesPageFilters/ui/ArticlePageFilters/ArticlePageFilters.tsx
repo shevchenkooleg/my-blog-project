@@ -7,7 +7,7 @@ import { ArticleSortSelectors } from "../ArticleSortSelectors/ArticleSortSelecto
 import { ArticlePageSearchBar } from "../ArticlePageSearchBar/ArticlePageSearchBar";
 import { ArticleViewSelector } from "../ArticleViewSelector/ArticleViewSelector";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { fetchArticlesList } from "@/pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList";
+import { fetchArticlesList } from "@/pages/ArticlesPage";
 import { useDebounce } from "@/shared/lib/hooks/useDebounce/useDebounce";
 import { ArticleTypeTabs } from "../ArticleTypeTabs/ArticleTypeTabs";
 

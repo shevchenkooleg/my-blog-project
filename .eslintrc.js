@@ -76,7 +76,8 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
         'promise/param-names': 'off',
-        'path-import-validation-plugin/relative-path-import-checker': 'error'
+        'path-import-validation-plugin/relative-path-import-checker': ['error', { alias: '@' }],
+        'path-import-validation-plugin/public-api-imports': ['error', { alias: '@' }]
     },
     globals: {
         __IS_DEV__: true,

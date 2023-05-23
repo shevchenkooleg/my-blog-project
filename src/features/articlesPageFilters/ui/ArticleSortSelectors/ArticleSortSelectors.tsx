@@ -11,7 +11,7 @@ import {
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
 import { type SortOrder } from "@/shared/types";
-import { articlesPageActions } from "@/pages/ArticlesPage/model/slice/articlesPageSlice";
+import { articlesPageActions } from "@/pages/ArticlesPage";
 import { ArticleSortField } from "@/entities/Article";
 
 interface ArticleSortSelectorsProps {

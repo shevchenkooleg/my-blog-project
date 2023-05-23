@@ -8,4 +8,7 @@ export {
     getArticlesPageHasMore
 } from './model/selectors/artcilesPageSelectors'
 
+export { articlesPageActions } from './model/slice/articlesPageSlice'
+export { fetchArticlesList } from './model/services/fetchArticlesList/fetchArticlesList'
+
 

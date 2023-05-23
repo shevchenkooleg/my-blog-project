@@ -3,10 +3,10 @@ import { classNames } from "@/shared/lib/classNames/classNames";
 import { memo } from "react";
 import { ArticleDetails } from "@/entities/Article";
 import { useParams } from "react-router-dom";
-import { Page } from "@/widgets/Page/ui/Page";
+import { Page } from "@/widgets/Page";
 import {
     ArticleRecommendationsList
-} from "@/features/articleRecommendationsList/ui/ArticleRecommendationsList/ArticleRecommendationsList";
+} from "@/features/articleRecommendationsList";
 
 import { ArticleDetailsPageHeader } from "../ArticleDetailsPageHeader/ArticleDetailsPageHeader";
 import { VStack } from "@/shared/ui/Stack";

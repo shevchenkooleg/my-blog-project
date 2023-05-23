@@ -29,7 +29,7 @@ describe('addCommentForArticle.test', () => {
                 text: 'Bla'
             }
         })
-
+        //
         thunk.api.post.mockReturnValue(Promise.resolve({ data: commentData }))
         const result = await thunk.callThunk(undefined);
         expect(thunk.api.post).toHaveBeenCalled()

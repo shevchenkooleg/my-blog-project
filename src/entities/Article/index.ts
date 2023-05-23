@@ -1,7 +1,9 @@
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails'
+export { ArticleListItemSkeleton } from './ui/ArticleListItemSkeleton/ArticleListItemSkeleton'
 
 export type { Article } from './model/types/article'
 export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema'
+export { ArticleView, ArticleSortField, ArticleBlockType, ArticleType } from './model/consts/consts'
 
 
 export { getArticleDetailsData } from './model/selectors/getArticleDetailsData/getArticleDetailsData'
@@ -11,4 +13,4 @@ export { getCanEditArticle } from './model/selectors/getCanEditArticle/getCanEdi
 
 export { ArticleList } from './ui/ArticleList/ArticleList'
 
-export { ArticleView, ArticleSortField, ArticleBlockType, ArticleType } from './model/consts/consts'
+

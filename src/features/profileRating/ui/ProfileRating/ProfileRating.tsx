@@ -2,8 +2,8 @@ import { memo, useCallback } from "react";
 import { RatingCard } from "@/entities/Rating";
 import { useSelector } from "react-redux";
 import { getUserAuthData } from "@/entities/User";
-import { useGetProfileRating, useRateProfile } from "@/features/profileRating/ui/api/profileRatingApi";
 import { useTranslation } from "react-i18next";
+import { useGetProfileRating, useRateProfile } from "../api/profileRatingApi";
 
 export interface ProfileRatingProps {
     className?: string

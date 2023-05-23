@@ -7,12 +7,10 @@ import {
     getArticlesPageFiltersOrder,
     getArticlesPageFiltersPageView,
     getArticlesPageFiltersSearch,
-    getArticlesPageFiltersSort
+    getArticlesPageFiltersSort,
+    getArticlesPageFiltersType
 } from "@/features/articlesPageFilters";
 import { addQueryParams } from "@/shared/lib/url/addQueryParams/addQueryParams";
-import {
-    getArticlesPageFiltersType
-} from "@/features/articlesPageFilters/model/selectors/articlesPageFiltersSelectors";
 
 interface FetchArticlesListProps {
     replace?: boolean
