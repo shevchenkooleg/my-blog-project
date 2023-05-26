@@ -77,7 +77,13 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'promise/param-names': 'off',
         'path-import-validation-plugin/relative-path-import-checker': ['error', { alias: '@' }],
-        'path-import-validation-plugin/public-api-imports': ['error', { alias: '@' }]
+        'path-import-validation-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.stories.tsx', '**/StoreDecorator.tsx']
+            }
+        ]
     },
     globals: {
         __IS_DEV__: true,

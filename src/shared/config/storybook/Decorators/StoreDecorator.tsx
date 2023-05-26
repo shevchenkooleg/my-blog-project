@@ -1,15 +1,10 @@
 import { type Story } from "@storybook/react";
 import { type StateSchema, StoreProvider } from "@/app/providers/StoreProvider";
 import { type ReducerList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-// TODO
-// eslint-disable-next-line path-import-validation-plugin/public-api-imports
-import { loginReducer } from "@/features/authByUsername/model/slice/loginSlice";
-// eslint-disable-next-line path-import-validation-plugin/public-api-imports
-import { articleDetailsReducer } from "@/entities/Article/model/slice/articleDetailsSlice";
-// eslint-disable-next-line path-import-validation-plugin/public-api-imports
-import { addCommentFormReducer } from "@/features/addCommentForm/model/slice/addCommentFormSlice";
-// eslint-disable-next-line path-import-validation-plugin/public-api-imports
-import { profileReducer } from "@/features/editableProfileCard/model/slice/profileSlice";
+import { loginReducer } from "@/features/authByUsername/testing";
+import { articleDetailsReducer } from "@/entities/Article/testing";
+import { addCommentFormReducer } from "@/features/addCommentForm/testing";
+import { profileReducer } from "@/features/editableProfileCard/testing";
 import { userReducer } from "@/entities/User";
 import { pageSliceReducer } from "@/widgets/Page";
 
