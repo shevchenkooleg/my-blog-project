@@ -5,10 +5,9 @@ import { loginReducer } from "@/features/authByUsername/testing";
 import { articleDetailsReducer } from "@/entities/Article/testing";
 import { addCommentFormReducer } from "@/features/addCommentForm/testing";
 import { profileReducer } from "@/features/editableProfileCard/testing";
-import { userReducer } from "@/entities/User";
-import { pageSliceReducer } from "@/widgets/Page";
-
-import { articleDetailsCommentReducer } from "@/features/articleCommentList";
+import { userReducer } from "@/entities/User/testing";
+import { pageSliceReducer } from "@/widgets/Page/testing";
+import { articleDetailsCommentReducer } from "@/features/articleCommentList/testing";
 
 const defaultAsyncReducers: ReducerList = {
     loginForm: loginReducer,

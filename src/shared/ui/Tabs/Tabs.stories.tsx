@@ -1,8 +1,8 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
-import { Theme } from "@/app/providers/ThemeProvider";
 import { Tabs } from './Tabs';
 import { action } from "@storybook/addon-actions";
+import { Theme } from "@/shared/const/theme";
 
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions

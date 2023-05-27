@@ -1,9 +1,9 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
-import { Theme } from "@/app/providers/ThemeProvider";
 import ArticleRating from './ArticleRating';
 import { StoreDecorator } from "@/shared/config/storybook/Decorators/StoreDecorator";
 import withMock from "storybook-addon-mock";
+import { Theme } from "@/shared/const/theme";
 
 const mockRating = [{
     rate: 4

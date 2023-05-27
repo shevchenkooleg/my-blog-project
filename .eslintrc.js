@@ -83,6 +83,13 @@ module.exports = {
                 alias: '@',
                 testFilesPatterns: ['**/*.test.*', '**/*.stories.tsx', '**/StoreDecorator.tsx']
             }
+        ],
+        'path-import-validation-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing']
+            }
         ]
     },
     globals: {

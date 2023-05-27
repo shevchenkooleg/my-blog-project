@@ -1,6 +1,5 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
-import { Theme } from "@/app/providers/ThemeProvider";
 import { NotFoundPage } from "./NotFoundPage";
 import { StoreDecorator } from "@/shared/config/storybook/Decorators/StoreDecorator";
 

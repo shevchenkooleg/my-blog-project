@@ -3,7 +3,8 @@ import { classNames } from "@/shared/lib/classNames/classNames";
 import React, { type FC } from 'react';
 import { useTranslation } from "react-i18next";
 import { Button } from "../../Button/Button";
-import { useTheme } from "@/app/providers/ThemeProvider";
+import { useTheme } from "@/shared/lib/hooks/useTheme/useTheme";
+
 
 interface ErrorPageProps {
     className?: string

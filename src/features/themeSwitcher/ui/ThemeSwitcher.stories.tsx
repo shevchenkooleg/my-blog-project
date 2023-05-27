@@ -1,11 +1,11 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
-import { Theme } from "@/app/providers/ThemeProvider";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import { Theme } from "@/shared/const/theme";
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'widgets/ThemeSwitcher',
+    title: 'widgets/themeSwitcher',
     component: ThemeSwitcher,
     argTypes: {
         backgroundColor: { control: 'color' }

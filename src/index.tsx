@@ -29,3 +29,4 @@ root.render(
 
 
 
+export { Theme } from "@/shared/const/theme";

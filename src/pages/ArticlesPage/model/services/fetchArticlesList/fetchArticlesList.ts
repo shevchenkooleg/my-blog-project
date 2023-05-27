@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
-import { type ThunkConfig } from "@/app/providers/StoreProvider/config/StateSchema";
+import { type ThunkConfig } from "@/app/providers/StoreProvider";
 import { ArticleType, type Article } from "@/entities/Article";
 import { getArticlesPageLimit, getArticlesPagePageNum } from "../../selectors/artcilesPageSelectors";
 import { type FetchArticlesListPayload } from "../../slice/articlesPageSlice";

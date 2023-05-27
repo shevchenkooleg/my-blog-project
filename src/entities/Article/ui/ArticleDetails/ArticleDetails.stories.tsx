@@ -1,10 +1,10 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
-import { Theme } from "@/app/providers/ThemeProvider";
 import { ArticleDetails } from './ArticleDetails';
 import { StoreDecorator } from "@/shared/config/storybook/Decorators/StoreDecorator";
 import { type Article } from '../../model/types/article';
 import { ArticleBlockType, ArticleType } from '../../model/consts/consts';
+import { Theme } from "@/shared/const/theme";
 
 
 const article: Article = {

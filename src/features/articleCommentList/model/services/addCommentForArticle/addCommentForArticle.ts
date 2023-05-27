@@ -1,6 +1,8 @@
-import { type ThunkConfig } from "@/app/providers/StoreProvider/config/StateSchema"
+import { type ThunkConfig } from "@/app/providers/StoreProvider"
 import { getArticleDetailsData } from "@/entities/Article"
 import { getUserAuthData } from "@/entities/User"
+// TODO
+// eslint-disable-next-line path-import-validation-plugin/layer-imports
 import { getAddCommentFormText } from "@/features/addCommentForm"
 import { createAsyncThunk } from "@reduxjs/toolkit"
 import { fetchCommentsByArticleId } from "../fetchCommentsByArticleId/fetchCommentsByArticleId"

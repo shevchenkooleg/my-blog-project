@@ -1,8 +1,8 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import AboutPage from "./AboutPage";
 import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
-import { Theme } from "@/app/providers/ThemeProvider";
 import { StoreDecorator } from "@/shared/config/storybook/Decorators/StoreDecorator";
+import { Theme } from "@/shared/const/theme";
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
     title: 'pages/AboutPage',
