@@ -39,6 +39,7 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
         dispatch(fetchCommentsByArticleId(id))
     })
 
+
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={true}>
             <VStack max>

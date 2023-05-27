@@ -21,10 +21,6 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
     const { className } = props
     const { id } = useParams<{ id: string }>()
 
-    if (!id) {
-        return null
-    }
-
     return (
         <Page className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
             <VStack gap={'16'} max>
