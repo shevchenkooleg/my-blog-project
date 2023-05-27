@@ -8,7 +8,7 @@ import { Theme } from '@/shared/const/theme';
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'pages/ArticlesPage/ArticleInfiniteList',
+    title: 'features/articleList/ArticleInfiniteList',
     component: ArticleInfiniteList,
     argTypes: {
         backgroundColor: { control: 'color' }

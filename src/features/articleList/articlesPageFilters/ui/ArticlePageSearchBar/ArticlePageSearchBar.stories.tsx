@@ -7,7 +7,7 @@ import { Theme } from "@/shared/const/theme";
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'features/ArticlePageFilters/ArticlePageSearchBar',
+    title: 'features/articleList/ArticlePageFilters/ArticlePageSearchBar',
     component: ArticlePageSearchBar,
     argTypes: {
         backgroundColor: { control: 'color' }

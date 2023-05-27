@@ -7,7 +7,7 @@ import { Theme } from "@/shared/const/theme";
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'features/ArticlePageFilters/ArticleViewSelector',
+    title: 'features/articleList/ArticlePageFilters/ArticleViewSelector',
     component: ArticleViewSelector,
     argTypes: {
         backgroundColor: { control: 'color' }

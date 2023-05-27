@@ -4,8 +4,8 @@ import { memo } from "react";
 import { ArticleView } from "@/entities/Article";
 import ListIcon from '@/shared/assets/icons/List-icon.svg'
 import TiledIcon from '@/shared/assets/icons/Tiled-icon.svg'
-import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
-import { Icon } from "@/shared/ui/Icon/Icon";
+import { Button, ButtonTheme } from "@/shared/ui/Button";
+import { Icon } from "@/shared/ui/Icon";
 import { useSelector } from "react-redux";
 import { getArticlesPageFiltersPageView } from "../../model/selectors/articlesPageFiltersSelectors";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";

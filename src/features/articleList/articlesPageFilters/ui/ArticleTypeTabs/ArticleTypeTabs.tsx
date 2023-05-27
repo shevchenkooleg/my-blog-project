@@ -2,7 +2,7 @@ import cls from "./ArticleTypeTabs.module.scss"
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { memo, useMemo } from "react";
-import { type TabItem, Tabs } from "@/shared/ui/Tabs/Tabs";
+import { type TabItem, Tabs } from "@/shared/ui/Tabs";
 import { useSelector } from "react-redux";
 import { getArticlesPageFiltersType } from "../../model/selectors/articlesPageFiltersSelectors";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";

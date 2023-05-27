@@ -5,7 +5,7 @@ import { Theme } from "@/shared/const/theme";
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'widgets/themeSwitcher',
+    title: 'features/themeSwitcher',
     component: ThemeSwitcher,
     argTypes: {
         backgroundColor: { control: 'color' }

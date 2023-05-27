@@ -1,6 +1,6 @@
 import { memo, useCallback } from "react";
 import { VStack } from "@/shared/ui/Stack";
-import { Text } from "@/shared/ui/Text/Text";
+import { Text } from "@/shared/ui/Text";
 import { AddCommentForm, getAddCommentFormText } from "@/features/addCommentForm";
 import { CommentList } from "@/entities/Comment";
 import {

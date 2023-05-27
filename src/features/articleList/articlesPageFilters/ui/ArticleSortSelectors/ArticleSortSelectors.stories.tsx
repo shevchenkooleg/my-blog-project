@@ -7,7 +7,7 @@ import { Theme } from "@/shared/const/theme";
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-    title: 'features/ArticlePageFilters/ArticleSortSelectors',
+    title: 'features/articleList/ArticlePageFilters/ArticleSortSelectors',
     component: ArticleSortSelectors,
     argTypes: {
         backgroundColor: { control: 'color' }

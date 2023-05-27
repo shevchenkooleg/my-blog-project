@@ -1,8 +1,8 @@
 import cls from "./ArticlePageSearchBar.module.scss"
 import { useTranslation } from "react-i18next";
 import { memo, useCallback } from "react";
-import { Input } from "@/shared/ui/Input/Input";
-import { Card } from "@/shared/ui/Card/Card";
+import { Input } from "@/shared/ui/Input";
+import { Card } from "@/shared/ui/Card";
 import { useSelector } from "react-redux";
 import { getArticlesPageFiltersSearch } from "../../model/selectors/articlesPageFiltersSelectors";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
