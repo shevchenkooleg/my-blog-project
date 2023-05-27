@@ -6,6 +6,7 @@ import { type Profile } from "@/entities/Profile";
 import { Country } from "@/entities/Country";
 import { Currency } from "@/entities/Currency";
 import { Theme } from '@/shared/const/theme';
+import withMock from "storybook-addon-mock";
 
 const profile: Profile = {
     username: 'admin',
@@ -18,6 +19,10 @@ const profile: Profile = {
     lastName: 'Shevchenko',
     avatar: 'https://i.imgur.com/qw7CV6k.jpg'
 }
+
+const mockRating = [{
+    rate: 3
+}]
 
 const storeData = {
     profile: {
@@ -42,8 +47,17 @@ export default {
         backgroundColor: { control: 'color' }
     },
     decorators: [
+        withMock,
         StoreDecorator(storeData)
-    ]
+    ],
+    parameters: {
+        mockData: [{
+            url: `${__API__}/profile-ratings?userId=1&profileId=2`,
+            method: 'GET',
+            status: 200,
+            response: mockRating
+        }]
+    }
 } as ComponentMeta<typeof ProfilePage>;
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args}/>;
