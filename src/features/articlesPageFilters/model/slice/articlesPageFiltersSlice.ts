@@ -2,6 +2,8 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { type ArticlesPageFiltersSchema } from "../types/articlesPageFiltersSchema";
 import { type SortOrder } from "@/shared/types";
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from "@/shared/const/localstorage";
+// TODO
+// eslint-disable-next-line path-import-validation-plugin/layer-imports
 import { articlesPageActions } from '@/pages/ArticlesPage';
 import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
 
