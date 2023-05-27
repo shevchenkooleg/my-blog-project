@@ -3,6 +3,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecora
 import { StoreDecorator } from "@/shared/config/storybook/Decorators/StoreDecorator";
 import withMock from "storybook-addon-mock";
 import ProfileRating from './ProfileRating';
+import { Theme } from '@/shared/const/theme';
 
 const mockRating = [{
     rate: 3

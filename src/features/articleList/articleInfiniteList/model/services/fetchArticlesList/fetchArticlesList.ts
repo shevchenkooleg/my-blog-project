@@ -9,7 +9,7 @@ import {
     getArticlesPageFiltersSearch,
     getArticlesPageFiltersSort,
     getArticlesPageFiltersType
-} from "@/features/articlesPageFilters";
+} from "../../../../index";
 import { addQueryParams } from "@/shared/lib/url/addQueryParams/addQueryParams";
 
 interface FetchArticlesListProps {

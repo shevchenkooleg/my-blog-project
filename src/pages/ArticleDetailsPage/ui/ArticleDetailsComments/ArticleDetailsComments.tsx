@@ -1,7 +1,7 @@
 import { memo, useCallback } from "react";
 import { VStack } from "@/shared/ui/Stack";
 import { Text } from "@/shared/ui/Text/Text";
-import { AddCommentForm } from "@/features/addCommentForm";
+import { AddCommentForm, getAddCommentFormText } from "@/features/addCommentForm";
 import { CommentList } from "@/entities/Comment";
 import {
     addCommentForArticle,
@@ -23,12 +23,13 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
     const { id } = props
     const comments = useSelector(getArticleComments.selectAll)
     const isLoading = useSelector(getArticleCommentsIsLoading)
+    const text = useSelector(getAddCommentFormText)
     const dispatch = useAppDispatch()
     const { t } = useTranslation()
 
     const onSendComment = useCallback(() => {
-        dispatch(addCommentForArticle())
-    }, [dispatch])
+        dispatch(addCommentForArticle(text))
+    }, [dispatch, text])
 
     const reducers: ReducerList = {
         articleDetailsComments: articleDetailsCommentReducer

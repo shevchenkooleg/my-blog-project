@@ -2,18 +2,20 @@ import cls from "./ArticlesPage.module.scss"
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { memo, useCallback } from "react";
 import { DynamicModuleLoader, type ReducerList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-import { articlesPageReducer } from "../../model/slice/articlesPageSlice";
 import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useSelector } from "react-redux";
-import { getArticlesPageError } from "../../model/selectors/artcilesPageSelectors";
 import { Page } from "@/widgets/Page";
-import { fetchNextArticlePage } from "../../model/services/fetchNextArticlePage/fetchNextArticlePage";
 import { useTranslation } from "react-i18next";
-import { initArticlesPage } from "../../model/services/initArticlesPage/initArticlesPage";
-import { ArticlePageFilters } from "@/features/articlesPageFilters";
+import {
+    ArticlePageFilters,
+    fetchNextArticlePage,
+    ArticleInfiniteList,
+    initArticlesPage,
+    getArticlesPageError,
+    articlesPageReducer
+} from "@/features/articleList";
 import { useSearchParams } from "react-router-dom";
-import { ArticleInfiniteList } from "../ArticleInfiniteList/ArticleInfiniteList";
 
 
 interface ArticlesPageProps {

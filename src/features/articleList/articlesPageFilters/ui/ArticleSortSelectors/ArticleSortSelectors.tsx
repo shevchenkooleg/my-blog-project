@@ -11,10 +11,8 @@ import {
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
 import { type SortOrder } from "@/shared/types";
-// TODO
-// eslint-disable-next-line path-import-validation-plugin/layer-imports
-import { articlesPageActions } from "@/pages/ArticlesPage";
 import { ArticleSortField } from "@/entities/Article";
+import { articlesPageActions } from "../../../index";
 
 interface ArticleSortSelectorsProps {
     className?: string

@@ -11,11 +11,11 @@ import { type AxiosInstance } from "axios";
 import { type ArticleDetailsSchema } from "@/entities/Article";
 import { type ArticleDetailsCommentSchema } from "@/features/articleCommentList";
 import { type AddCommentFormSchema } from "@/features/addCommentForm";
-import { type ArticlesPageSchema } from "@/pages/ArticlesPage";
+import { type ArticlesPageSchema, type ArticlesPageFiltersSchema } from "@/features/articleList";
 import { type PageSchema } from "@/widgets/Page";
-import { type ArticlesPageFiltersSchema } from "@/features/articlesPageFilters";
 import { type rtkApi } from "@/shared/api/rtkApi";
 import { type ProfileSchema } from "@/features/editableProfileCard";
+
 
 
 export interface StateSchema {

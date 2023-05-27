@@ -3,7 +3,10 @@ import { articlesPageActions } from "../../slice/articlesPageSlice";
 import { fetchArticlesList } from "../fetchArticlesList/fetchArticlesList";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { type ThunkConfig } from "@/app/providers/StoreProvider";
-import { getArticlesPageFiltersPageView, articlesPageFiltersActions } from "@/features/articlesPageFilters";
+import {
+    getArticlesPageFiltersPageView,
+    articlesPageFiltersActions
+} from "../../../../index";
 import { type SortOrder } from "@/shared/types";
 import { type ArticleSortField, type ArticleType } from "@/entities/Article";
 

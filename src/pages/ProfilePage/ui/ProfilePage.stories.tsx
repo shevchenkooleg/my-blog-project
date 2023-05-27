@@ -5,6 +5,7 @@ import { StoreDecorator } from "@/shared/config/storybook/Decorators/StoreDecora
 import { type Profile } from "@/entities/Profile";
 import { Country } from "@/entities/Country";
 import { Currency } from "@/entities/Currency";
+import { Theme } from '@/shared/const/theme';
 
 const profile: Profile = {
     username: 'admin',

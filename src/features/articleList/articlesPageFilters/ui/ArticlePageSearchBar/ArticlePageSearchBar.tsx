@@ -7,9 +7,7 @@ import { useSelector } from "react-redux";
 import { getArticlesPageFiltersSearch } from "../../model/selectors/articlesPageFiltersSelectors";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
-// TODO
-// eslint-disable-next-line path-import-validation-plugin/layer-imports
-import { articlesPageActions } from "@/pages/ArticlesPage";
+import { articlesPageActions } from "../../../index";
 
 interface ArticlePageSearchBarProps {
     className?: string

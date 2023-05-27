@@ -4,6 +4,7 @@ import { Navbar } from "./Navbar";
 import { StoreDecorator } from "@/shared/config/storybook/Decorators/StoreDecorator";
 import avatar from '@/shared/assets/tests/storybook.png'
 import withMock from "storybook-addon-mock";
+import { Theme } from '@/shared/const/theme';
 
 const dataSample = [
     {

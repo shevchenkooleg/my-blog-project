@@ -7,11 +7,9 @@ import { ArticleSortSelectors } from "../ArticleSortSelectors/ArticleSortSelecto
 import { ArticlePageSearchBar } from "../ArticlePageSearchBar/ArticlePageSearchBar";
 import { ArticleViewSelector } from "../ArticleViewSelector/ArticleViewSelector";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
-// TODO
-// eslint-disable-next-line path-import-validation-plugin/layer-imports
-import { fetchArticlesList } from "@/pages/ArticlesPage";
 import { useDebounce } from "@/shared/lib/hooks/useDebounce/useDebounce";
 import { ArticleTypeTabs } from "../ArticleTypeTabs/ArticleTypeTabs";
+import { fetchArticlesList } from "../../../index";
 
 interface ArticlesSortFormProps {
     className?: string
