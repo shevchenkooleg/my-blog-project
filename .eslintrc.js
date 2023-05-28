@@ -34,7 +34,8 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
-        'path-import-validation-plugin'
+        'path-import-validation-plugin',
+        'unused-imports'
     ],
     parser: '@typescript-eslint/parser',
     rules: {
@@ -53,6 +54,7 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-misused-promises': [0],
         '@typescript-eslint/no-floating-promises': [0],
+        'unused-imports/no-unused-imports': 'error',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
             ignoreAttribute: [

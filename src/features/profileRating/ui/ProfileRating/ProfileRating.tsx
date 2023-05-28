@@ -30,7 +30,7 @@ const ProfileRating = memo((props: ProfileRatingProps) => {
         }
     }, [profileId, rateProfileMutation, userData?.id])
 
-    if (isLoading) {
+    if (isLoading || String(userData?.id) === profileId) {
         return null
     }
 
