@@ -11030,6 +11030,12 @@
       "articleId": "1",
       "userId": "2",
       "id": "RNq4OZ2"
+    },
+    {
+      "text": "cool article!!!",
+      "articleId": "26",
+      "userId": "1",
+      "id": "auXEVra"
     }
   ],
   "users": [
@@ -11175,6 +11181,12 @@
       "articleId": "7",
       "rate": 4,
       "id": 6
+    },
+    {
+      "userId": "1",
+      "articleId": "26",
+      "rate": 4,
+      "id": 7
     }
   ],
   "profile-ratings": [
