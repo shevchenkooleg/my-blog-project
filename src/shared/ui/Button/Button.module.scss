@@ -2,13 +2,16 @@
     cursor: pointer;
     color: var(--primary-color);
     padding: 6px 15px;
-    display: flex;
 
     &:hover {
         opacity: 0.7;
         fill-opacity: 70%;
         stroke-opacity: 70%;
     }
+}
+
+.btnFlex {
+    display: flex;
 }
 
 .clear,
