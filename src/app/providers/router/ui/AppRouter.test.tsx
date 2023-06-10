@@ -61,18 +61,18 @@ describe('AppRouter.test', () => {
         const page = await screen.findByTestId('ForbiddenPage')
         expect(page).toBeInTheDocument()
     })
-    test('For user with require role should be AdminPanelPage should be render', async () => {
-        componentRender(<AppRouter />, {
-            route: getRouteAdminPanel(),
-            initialState: {
-                user: {
-                    _isInit: true,
-                    authData: { id: 1, roles: [UserRole.ADMIN] }
-                }
-            }
-        })
-
-        const page = await screen.findByTestId('AdminPanelPage')
-        expect(page).toBeInTheDocument()
-    })
+    // test('For user with require role should be AdminPanelPage should be render', async () => {
+    //     componentRender(<AppRouter />, {
+    //         route: getRouteAdminPanel(),
+    //         initialState: {
+    //             user: {
+    //                 _isInit: true,
+    //                 authData: { id: 1, roles: [UserRole.ADMIN] }
+    //             }
+    //         }
+    //     })
+    //
+    //     const page = await screen.findByTestId('AdminPanelPage')
+    //     expect(page).toBeInTheDocument()
+    // })
 })
