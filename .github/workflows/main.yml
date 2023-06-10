@@ -83,9 +83,9 @@ name: linting, testing, building
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 permissions:
   contents: write
   pages: write
