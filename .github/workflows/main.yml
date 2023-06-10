@@ -78,6 +78,7 @@
 #        if: always()
 
 name: linting, testing, building
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
     branches: [ master ]
