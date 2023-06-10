@@ -7,7 +7,7 @@ import {
     getArticlesPageFiltersPageView,
     articlesPageFiltersActions
 } from "../../../../index";
-import { type SortOrder } from "@/shared/types";
+import { type SortOrder } from "@/shared/types/sort";
 import { type ArticleSortField, type ArticleType } from "@/entities/Article";
 
 

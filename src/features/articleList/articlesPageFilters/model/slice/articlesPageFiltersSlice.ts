@@ -1,6 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { type ArticlesPageFiltersSchema } from "../types/articlesPageFiltersSchema";
-import { type SortOrder } from "@/shared/types";
+import { type SortOrder } from "@/shared/types/sort";
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from "@/shared/const/localstorage";
 import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
 import { articlesPageActions } from '../../../index';

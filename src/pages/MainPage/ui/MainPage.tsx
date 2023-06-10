@@ -6,7 +6,7 @@ const MainPage = () => {
 
 
     return (
-        <Page>
+        <Page data-testid={'MainPage'}>
             {t('главная страница')}
         </Page>
     );

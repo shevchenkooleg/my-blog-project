@@ -12,7 +12,7 @@ const AdminPanelPage = (props: AdminPanelPageProps) => {
     const { className } = props
 
     return (
-        <Page className={classNames('', {}, [className])}>
+        <Page data-testid={'AdminPanelPage'} className={classNames('', {}, [className])}>
             {t('Панель администратора')}
         </Page>
     );

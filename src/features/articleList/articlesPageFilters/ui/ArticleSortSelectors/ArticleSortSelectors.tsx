@@ -10,7 +10,7 @@ import {
 } from "../../model/selectors/articlesPageFiltersSelectors";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { articlesPageFiltersActions } from "../../model/slice/articlesPageFiltersSlice";
-import { type SortOrder } from "@/shared/types";
+import { type SortOrder } from "@/shared/types/sort";
 import { ArticleSortField } from "@/entities/Article";
 import { articlesPageActions } from "../../../index";
 
