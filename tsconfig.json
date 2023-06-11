@@ -27,7 +27,8 @@
         "src/**/*.tsx",
         "config/**/*.ts",
         "config/**/*.tsx",
-        "./scripts/**/*.ts"
+        "./scripts/**/*.ts",
+        "./cypress/**/*.ts"
 //        "./config/jest/jest.config.ts",
 //        "./config/jest/jestSetup.ts",
     ]
