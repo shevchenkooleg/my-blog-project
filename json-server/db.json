@@ -10722,6 +10722,84 @@
           ]
         }
       ]
+    },
+    {
+      "title": "TEST-TITLE",
+      "subtitle": "Что нового в Kotlin за 2022 год?",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkH7rlu_zRmHNK5fpvdRVb_-HrPfL1Fe4iGiiCAAdf&s",
+      "views": 2553,
+      "createdAt": "16.01.2023",
+      "userId": "4",
+      "type": [
+        "ECONOMIC"
+      ],
+      "blocks": [],
+      "id": "Bi9QkAg"
+    },
+    {
+      "title": "TEST-TITLE",
+      "subtitle": "Что нового в Kotlin за 2022 год?",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkH7rlu_zRmHNK5fpvdRVb_-HrPfL1Fe4iGiiCAAdf&s",
+      "views": 2553,
+      "createdAt": "16.01.2023",
+      "userId": "4",
+      "type": [
+        "ECONOMIC"
+      ],
+      "blocks": [],
+      "id": "bZ920BG"
+    },
+    {
+      "title": "TEST-TITLE",
+      "subtitle": "Что нового в Kotlin за 2022 год?",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkH7rlu_zRmHNK5fpvdRVb_-HrPfL1Fe4iGiiCAAdf&s",
+      "views": 2553,
+      "createdAt": "16.01.2023",
+      "userId": "4",
+      "type": [
+        "ECONOMIC"
+      ],
+      "blocks": [],
+      "id": "W7WQ03-"
+    },
+    {
+      "title": "TEST-TITLE",
+      "subtitle": "Что нового в Kotlin за 2022 год?",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkH7rlu_zRmHNK5fpvdRVb_-HrPfL1Fe4iGiiCAAdf&s",
+      "views": 2553,
+      "createdAt": "16.01.2023",
+      "userId": "4",
+      "type": [
+        "ECONOMIC"
+      ],
+      "blocks": [],
+      "id": "2B2s8IG"
+    },
+    {
+      "title": "TEST-TITLE",
+      "subtitle": "Что нового в Kotlin за 2022 год?",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkH7rlu_zRmHNK5fpvdRVb_-HrPfL1Fe4iGiiCAAdf&s",
+      "views": 2553,
+      "createdAt": "16.01.2023",
+      "userId": "4",
+      "type": [
+        "ECONOMIC"
+      ],
+      "blocks": [],
+      "id": "gomq8M6"
+    },
+    {
+      "title": "TEST-TITLE",
+      "subtitle": "Что нового в Kotlin за 2022 год?",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkH7rlu_zRmHNK5fpvdRVb_-HrPfL1Fe4iGiiCAAdf&s",
+      "views": 2553,
+      "createdAt": "16.01.2023",
+      "userId": "4",
+      "type": [
+        "ECONOMIC"
+      ],
+      "blocks": [],
+      "id": "JRfu9vE"
     }
   ],
   "comments": [
@@ -11109,6 +11187,17 @@
       "city": "Sochi",
       "username": "manager",
       "avatar": "https://banner2.cleanpng.com/20180606/wtw/kisspng-back-office-computer-icons-operations-management-f-manager-icon-5b17d295bec816.6825300615282878937815.jpg"
+    },
+    {
+      "id": "4",
+      "firstName": "FirstTest",
+      "lastName": "LastTest",
+      "age": 36,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Sochi",
+      "username": "testuser",
+      "avatar": "https://api-private.atlassian.com/users/d10ed8b13f08fbadbdbb9162a1c21a6e/avata"
     }
   ],
   "notifications": [

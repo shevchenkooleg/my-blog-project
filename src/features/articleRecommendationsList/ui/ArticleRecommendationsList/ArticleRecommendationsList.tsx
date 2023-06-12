@@ -16,7 +16,10 @@ export const ArticleRecommendationsList = memo((props: ArticlePageRecommendation
 
     if (isLoading) {
         return (
-            <div className={classNames('', {}, [className])}>
+            <div
+                data-testid={'ArticleRecommendationsList'}
+                className={classNames('', {}, [className])}
+            >
                 <Text size={TextSize.L} title={t('Рекомендуем')}/>
                 <div>
                     <ArticleListItemSkeleton/>
