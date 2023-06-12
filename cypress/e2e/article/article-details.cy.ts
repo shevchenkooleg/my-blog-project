@@ -19,16 +19,18 @@ describe('User visits articles details page', () => {
     it('And recommendation list loading successfully', () => {
         cy.getByTestId('ArticleRecommendationsList').should('exist')
     })
-    it('And leave an comment', () => {
+    it('And leave an comment (with_stabbed_data)', () => {
+        cy.intercept('GET', '**/articles/*', { fixture: 'article-details.json' })
         cy.getByTestId('ArticleDetails.Info')
         cy.getByTestId('AddCommentForm').scrollIntoView()
         cy.addComment('TestCommentText')
         cy.getByTestId('CommentCard.Content').should('have.length', 1)
     })
-    it('And rate this article', () => {
+    it('And rate this article (with_stabbed_data)', () => {
+        cy.intercept('GET', '**/articles/*', { fixture: 'article-details.json' })
         cy.getByTestId('ArticleDetails.Info')
         cy.getByTestId('RatingCard').scrollIntoView()
-        cy.setRate(4, 'feedback')
-        cy.get('[data-selected=true]').should('have.length', 4)
+        cy.setRate(3, 'feedback')
+        cy.get('[data-selected=true]').should('have.length', 3)
     })
 })
