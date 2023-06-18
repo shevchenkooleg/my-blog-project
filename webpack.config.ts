@@ -1,12 +1,23 @@
 import path from 'path';
 import type webpack from 'webpack';
 import { buildWebpackConfig } from './config/build/buildWebpackConfig';
-import type { BuildEnv, BuildPaths } from './config/build/types/config';
+import type { BuildEnv, BuildMode, BuildPaths } from "./config/build/types/config";
 
 // const handler = (percentage, message, ...args) => {
 //     // e.g. Output each progress message directly to the console:
 //     console.info(percentage, message, ...args);
 // };
+
+function getApiUrl (mode: BuildMode, apiUrl?: string) {
+    if (apiUrl) {
+        return apiUrl
+    }
+    if (mode === 'production') {
+        return '/api'
+    }
+
+    return 'localhost:8000'
+}
 
 
 
@@ -22,7 +33,7 @@ export default (env: BuildEnv) => {
 
     const mode = env?.mode || 'development'
     const PORT = env?.port || 3000
-    const apiUrl = env?.apiUrl || 'http://localhost:8000'
+    const apiUrl = getApiUrl(mode, env?.apiUrl)
 
     const isDev = mode === 'development'
 
